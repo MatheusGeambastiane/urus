@@ -40,7 +40,7 @@ export default function BarberiaLandingPage() {
               Localização
             </Link>
             <Link
-              href="#agendar"
+              href="https://wa.me/5571992997191"
               className="bg-gradient-to-r from-stone-400 to-stone-800 px-4 py-2 rounded-md font-medium hover:opacity-90 transition"
             >
               Agende seu horário
@@ -84,9 +84,11 @@ export default function BarberiaLandingPage() {
                 mais incrível da cidade baixa
               </span>
             </h1>
+            <Link href="https://wa.me/5571992997191" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-stone-400 to-stone-800 text-white border-0 px-8 py-6 text-lg hover:opacity-90 transition">
               Agende agora
             </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -119,9 +121,11 @@ export default function BarberiaLandingPage() {
                     </ul>
                   </div>
                 </div>
+                <Link href="https://wa.me/5571992997191" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-6 md:mt-0 bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-md transition-colors">
                   Agendar
                 </Button>
+              </Link>
               </div>
             </div>
           </div>
@@ -147,8 +151,8 @@ export default function BarberiaLandingPage() {
             <h3 className="text-2xl font-bold mb-8 text-center">Nossa Equipe</h3>
             <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
               {[
-                { name: "William", image: "/davi barbeiro.png" },
-                { name: "Davi", image: "/william barbeiro.png" },
+                { name: "Felipe", image: "/felipe_barbeiro_urus.jpeg" },
+                { name: "Henrique", image: "/henrique_barbeiro_urus.jpeg" },
 
               ].map((barber, index) => (
                 <div key={index} className="flex-shrink-0 w-64">
@@ -239,7 +243,8 @@ export default function BarberiaLandingPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="h-96 rounded-lg overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d126.8637920945285!2d-38.50171285897966!3d-12.941490273753583!2m2!1f66.96256159178438!2f45!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x716051c01461ecb%3A0x3b145631858aad49!2zUkogcmVmcmlnZXJhw6fDo28!5e1!3m2!1spt-BR!2sbr!4v1741412525976!5m2!1spt-BR!2sbr" 
+              
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.482497741865!2d-38.5005144!3d-12.940947800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71605f62f47ffcf%3A0x49cfd03fc7f6fbdb!2sUrus%20Barbearia%20-%20Salvador!5e0!3m2!1spt-BR!2sbr!4v1742263750701!5m2!1spt-BR!2sbr" 
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
@@ -252,7 +257,7 @@ export default function BarberiaLandingPage() {
                 <MapPin className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Endereço</h3>
-                  <p className="text-gray-700">Avenida Conselheiro Zacarias, 26</p>
+                  <p className="text-gray-700">Avenida Conselheiro Zacarias, 7</p>
                   <p className="text-gray-700">Mares - Salvador</p>
                 </div>
               </div>
@@ -310,7 +315,7 @@ export default function BarberiaLandingPage() {
 
       {/* Floating WhatsApp Button */}
       <Link
-        href="https://google.com"
+        href="https://wa.me/5571992997191"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
