@@ -77,7 +77,7 @@ export default function PromoPage() {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-amber-400">
-            E você acaba de ganhar 15% de desconto em qualquer serviço
+            E você acaba de ganhar 15% de desconto no seu primeiro atendimento, válido em qualquer serviço
           </h2>
 
           <div className="max-w-2xl mx-auto bg-gray-800/50 p-6 md:p-8 rounded-xl border border-gray-700 mt-8">
