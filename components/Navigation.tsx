@@ -15,6 +15,9 @@ export default function Navigation() {
           <Link href="#sobre" className="text-white hover:text-gray-300 transition">
             Sobre nós
           </Link>
+          <Link href="#espaco" className="text-white hover:text-gray-300 transition">
+            Nosso Espaço
+          </Link>
           <Link href="#servicos" className="text-white hover:text-gray-300 transition">
             Serviços
           </Link>
@@ -25,7 +28,7 @@ export default function Navigation() {
             href="https://wa.me/5571992997191"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-stone-400 to-stone-800 px-4 py-2 rounded-md font-medium hover:opacity-90 transition"
+            className="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-md font-medium hover:opacity-90 transition"
           >
             Agende seu horário
           </Link>

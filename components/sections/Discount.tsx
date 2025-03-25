@@ -32,7 +32,7 @@ export default function Discount() {
                   </ul>
                 </div>
               </div>
-              <Link href="https://wa.me/5571992997191" target="_blank" rel="noopener noreferrer">
+              <Link href="https://wa.me/5571992109189" target="_blank" rel="noopener noreferrer">
                 <Button className="mt-6 md:mt-0 bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-md transition-colors">
                   Agendar
                 </Button>

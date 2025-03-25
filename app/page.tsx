@@ -1,11 +1,12 @@
-import Navigation from "../components/Navigation"
+import Navigation from "@/components/Navigation"
 import Hero from "@/components/sections/Hero"
 import Discount from "@/components/sections/Discount"
 import About from "@/components/sections/About"
 import Services from "@/components/sections/Services"
+import Gallery from "@/components/sections/Gallery"
 import Location from "@/components/sections/Location"
 import Footer from "@/components/sections/Footer"
-import WhatsAppButton from "../components/WhatsAppButton"
+import WhatsAppButton from "@/components/WhatsAppButton"
 
 export default function BarberiaLandingPage() {
   return (
@@ -14,6 +15,7 @@ export default function BarberiaLandingPage() {
       <Hero />
       <Discount />
       <About />
+      <Gallery />
       <Services />
       <Location />
       <Footer />

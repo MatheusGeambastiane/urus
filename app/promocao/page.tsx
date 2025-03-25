@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import Navigation from "@/components/Navigation"
 import Footer from "@/components/sections/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
+import Location from "@/components/sections/Location"
 
 export default function PromoPage() {
   const [isVisible, setIsVisible] = useState(false)
@@ -35,6 +36,10 @@ export default function PromoPage() {
     }
   }, [])
 
+  const scrollToSecondSection = () => {
+    secondSectionRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
       <Navigation />
@@ -42,7 +47,7 @@ export default function PromoPage() {
       {/* First Section */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
         <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fadeIn">Veja o que Matheus fez:</h1>
-        <div className="animate-bounce mt-16">
+        <div className="animate-bounce mt-16 cursor-pointer" onClick={scrollToSecondSection}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="48"
@@ -53,7 +58,7 @@ export default function PromoPage() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-stone-400"
+            className="text-stone-400 hover:text-blue-400 transition-colors"
           >
             <path d="M12 5v14"></path>
             <path d="m19 12-7 7-7-7"></path>
@@ -68,16 +73,17 @@ export default function PromoPage() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-stone-100 to-stone-600 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-blue-300 to-blue-600 text-transparent bg-clip-text">
             Matheus fez a melhor barbearia da cidade
           </h1>
 
           <div className="relative w-full max-w-2xl h-80 md:h-96 mb-12 rounded-lg overflow-hidden shadow-2xl">
-            <Image src="/barbearia.png" alt="Barbearia URUS" fill className="object-cover" />
+            <div className="absolute inset-0 bg-black/30 z-10 rounded-lg"></div>
+            <Image src="/barbearia_fachada.jpg" alt="Barbearia URUS" fill className="object-cover object-center" />
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-amber-400">
-            E você acaba de ganhar 15% de desconto no seu primeiro atendimento, válido em qualquer serviço
+            E você acaba de ganhar 15% de desconto em qualquer serviço
           </h2>
 
           <div className="max-w-2xl mx-auto bg-gray-800/50 p-6 md:p-8 rounded-xl border border-gray-700 mt-8">
@@ -99,6 +105,12 @@ export default function PromoPage() {
             </div>
           </div>
         </section>
+      </div>
+
+      {/* Location Section */}
+      <div className="py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Venha nos visitar</h2>
+        <Location />
       </div>
 
       <Footer />
