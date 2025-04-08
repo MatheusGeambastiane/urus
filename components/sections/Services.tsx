@@ -1,13 +1,10 @@
 "use client"
-
-import { useState } from "react"
 import { Scissors, Palette, BeakerIcon as Beard, Sparkles, Droplets, Ruler, Package, Zap } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
-export default function Services() {
-  const [activeTab, setActiveTab] = useState("services")
 
+export default function Services() {
   const regularServices = [
     {
       title: "Corte de Cabelo",
@@ -74,8 +71,8 @@ export default function Services() {
       title: "Luzes + Corte",
       description: "Transformação completa com mechas e corte moderno.",
       originalPrice: 95,
-      price: 90,
-      savings: 5,
+      price: 85,
+      savings: 10,
       icon: <Package className="w-8 h-8" />,
     },
   ]
@@ -88,14 +85,10 @@ export default function Services() {
         <div className="flex justify-center mb-10">
           <Tabs defaultValue="services" className="w-full max-w-4xl">
             <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger
-                value="services"
-                className="text-lg py-3 font-medium"
-                onClick={() => setActiveTab("services")}
-              >
+              <TabsTrigger value="services" className="text-lg py-3 font-medium">
                 Serviços Individuais
               </TabsTrigger>
-              <TabsTrigger value="combos" className="text-lg py-3 font-medium" onClick={() => setActiveTab("combos")}>
+              <TabsTrigger value="combos" className="text-lg py-3 font-medium">
                 Combos Promocionais
               </TabsTrigger>
             </TabsList>
@@ -143,7 +136,6 @@ export default function Services() {
                         <Badge className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-1.5 px-4">
                           R$ {combo.price.toFixed(2).replace(".", ",")}
                         </Badge>
-                        <Badge/>
                       </div>
                     </CardContent>
                   </Card>
