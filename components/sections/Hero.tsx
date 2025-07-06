@@ -21,7 +21,7 @@ export default function Hero() {
               mais incrível da cidade baixa
             </span>
           </h1>
-          <Link href="https://wa.me/5571992997191" target="_blank" rel="noopener noreferrer">
+          <Link href="https://wa.me/557192109189" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white border-0 px-8 py-6 text-lg hover:opacity-90 transition">
               Agende agora
             </Button>

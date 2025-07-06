@@ -25,7 +25,7 @@ export default function Navigation() {
             Localização
           </Link>
           <Link
-            href="https://wa.me/5571992997191"
+            href="https://wa.me/557192109189"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-md font-medium hover:opacity-90 transition"

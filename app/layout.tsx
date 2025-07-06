@@ -86,7 +86,7 @@ export default function RootLayout({
               name: "URUS Barbearia",
               image: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
               url: "https://urusbarbearia.com.br",
-              telephone: "+5571992997191",
+              telephone: "+557192109189",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Avenida Conselheiro Zacarias, 7",
