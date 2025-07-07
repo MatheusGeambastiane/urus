@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 
 export default function About() {
   const barbers = [
-    { name: "Danilo", image: "/danilo_barbeiro_urus.jpg" },
-    { name: "Gustavo", image: "" },
+    { name: "Danilo", image: "/danilo_barbeiro_urus.jpeg" },
+    { name: "Gustavo", image: "/gustavo_barbeiro_urus.jpeg" },
   ]
 
   return (
