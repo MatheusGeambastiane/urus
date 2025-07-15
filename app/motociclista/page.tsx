@@ -73,7 +73,7 @@ export default function MotociclistaPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to_email: "contato@urusbarbearia.com.br",
+          to_email: "barbeariaurusba@gmail.com",
           subject: "Novo agendamento - Campanha Motociclista",
           template_name: "generic",
           template_vars: {
@@ -336,8 +336,7 @@ export default function MotociclistaPage() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="manha">Manhã (9h às 12h)</SelectItem>
-                        <SelectItem value="tarde">Tarde (12h às 17h)</SelectItem>
-                        <SelectItem value="noite">Noite (17h às 20h)</SelectItem>
+                        <SelectItem value="tarde">Tarde (12h às 18h)</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
