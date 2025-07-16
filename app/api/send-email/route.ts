@@ -11,12 +11,12 @@ export async function POST(req: Request) {
     service: "gmail",
     auth: {
       user: "cyberssatic@gmail.com",
-      pass: process.env.GMAIL_APP_PASSWORD, // coloque isso no .env
+      pass: "vtneyewerovlqeos", // coloque isso no .env
     },
   })
 
   const mailOptions = {
-    from: "bcyberssatic@gmail.com",
+    from: "cyberssatic@gmail.com",
     to: "barbeariaurusba@gmail.com",
     subject: "Novo agendamento - Campanha Motociclista",
     text: `
