@@ -65,24 +65,23 @@ export default function MotociclistaPage() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitMessage("")
+    console.log("Form data:", formData)
+
 
     try {
-      const response = await fetch("https://vleczv6wsc.execute-api.sa-east-1.amazonaws.com/mail-sender", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to_email: "barbeariaurusba@gmail.com",
-          subject: "Novo agendamento - Campanha Motociclista",
-          template_name: "generic",
-          template_vars: {
+
             nome: formData.nome,
             telefone: formData.telefone,
             servico: formData.servico,
             vemmoto: formData.vemmoto,
             horario: formData.horario,
-          },
+
         }),
       })
 
