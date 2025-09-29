@@ -9,22 +9,22 @@ export default function Navigation() {
           <span className="text-xl font-bold">URUS</span>
         </Link>
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="#home" className="text-white hover:text-gray-300 transition">
+          <Link href="/#home" className="text-white hover:text-gray-300 transition">
             Home
           </Link>
           <Link href="/protese-capilar" className="text-white hover:text-gray-300 transition">
             Prótese capilar
           </Link>
-          <Link href="#sobre" className="text-white hover:text-gray-300 transition">
+          <Link href="/#sobre" className="text-white hover:text-gray-300 transition">
             Sobre nós
           </Link>
-          <Link href="#espaco" className="text-white hover:text-gray-300 transition">
+          <Link href="/#espaco" className="text-white hover:text-gray-300 transition">
             Nosso Espaço
           </Link>
-          <Link href="#servicos" className="text-white hover:text-gray-300 transition">
+          <Link href="/#servicos" className="text-white hover:text-gray-300 transition">
             Serviços
           </Link>
-          <Link href="#localizacao" className="text-white hover:text-gray-300 transition">
+          <Link href="/#localizacao" className="text-white hover:text-gray-300 transition">
             Localização
           </Link>
           <Link
