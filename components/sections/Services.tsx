@@ -1,16 +1,40 @@
 "use client"
-import { Scissors, Palette, BeakerIcon as Beard, Sparkles, Droplets, Ruler, Package, Zap } from "lucide-react"
+import { ReactNode, useMemo } from "react"
+import {
+  Scissors,
+  Palette,
+  BeakerIcon as Beard,
+  Sparkles,
+  Droplets,
+  Ruler,
+  Package,
+  Zap,
+  Shield,
+} from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 
+type RegularService = {
+  title: string
+  description: string
+  icon: ReactNode
+} & ({
+  price: number
+  priceLabel?: never
+} | {
+  priceLabel: string
+  price?: never
+})
+
 export default function Services() {
-  const regularServices = [
-    {
-      title: "Corte de Cabelo",
-      description: "Cortes modernos e clássicos realizados com técnicas precisas.",
-      price: 25,
-      icon: <Scissors className="w-8 h-8" />,
+  const regularServices: RegularService[] = useMemo(
+    () => [
+      {
+        title: "Corte de Cabelo",
+        description: "Cortes modernos e clássicos realizados com técnicas precisas.",
+        price: 25,
+        icon: <Scissors className="w-8 h-8" />,
     },
     {
       title: "Barba",
@@ -42,13 +66,21 @@ export default function Services() {
       price: 70,
       icon: <Droplets className="w-8 h-8" />,
     },
-    {
-      title: "Descolorização",
-      description: "Processo para clarear os fios e preparar para coloração.",
-      price: 70,
-      icon: <Zap className="w-8 h-8" />,
-    },
-  ]
+      {
+        title: "Descolorização",
+        description: "Processo para clarear os fios e preparar para coloração.",
+        price: 70,
+        icon: <Zap className="w-8 h-8" />,
+      },
+      {
+        title: "Prótese Capilar",
+        description: "Restauração completa com próteses capilares de alto padrão sob medida.",
+        priceLabel: "A partir de R$ 1.800,00",
+        icon: <Shield className="w-8 h-8" />,
+      },
+    ],
+    [],
+  )
 
   const comboServices = [
     {
@@ -106,7 +138,9 @@ export default function Services() {
                       <p className="text-ddcece mb-4 flex-grow">{service.description}</p>
                       <div className="mt-auto">
                         <Badge className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-1.5 px-4">
-                          R$ {service.price.toFixed(2).replace(".", ",")}
+                          {"price" in service
+                            ? `R$ ${service.price.toFixed(2).replace(".", ",")}`
+                            : service.priceLabel}
                         </Badge>
                       </div>
                     </CardContent>
