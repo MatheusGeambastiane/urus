@@ -22,7 +22,7 @@ interface AccordionContextValue {
 const AccordionContext = createContext<AccordionContextValue | null>(null)
 const AccordionItemContext = createContext<string | null>(null)
 
-interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
+interface AccordionProps extends Omit<HTMLAttributes<HTMLDivElement>, "defaultValue"> {
   type?: "single"
   collapsible?: boolean
   defaultValue?: string | null
