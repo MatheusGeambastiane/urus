@@ -12,6 +12,9 @@ export default function Navigation() {
           <Link href="#home" className="text-white hover:text-gray-300 transition">
             Home
           </Link>
+          <Link href="/protese-capilar" className="text-white hover:text-gray-300 transition">
+            Prótese capilar
+          </Link>
           <Link href="#sobre" className="text-white hover:text-gray-300 transition">
             Sobre nós
           </Link>
