@@ -21,6 +21,10 @@ export default function Hero() {
               mais incrível da cidade baixa
             </span>
           </h1>
+          <p className="text-lg md:text-xl text-gray-200 mb-6">
+            Agora com serviço de prótese capilar personalizada a partir de R$ 1.800,00 para recuperar sua
+            confiança com naturalidade.
+          </p>
           <Link href="https://wa.me/557192109189" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white border-0 px-8 py-6 text-lg hover:opacity-90 transition">
               Agende agora
