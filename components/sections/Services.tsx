@@ -27,6 +27,16 @@ type RegularService = {
   price?: never
 })
 
+const isPricedService = (
+  service: RegularService,
+): service is RegularService & { price: number } => typeof service.price === "number"
+
+const formatCurrency = (value: number) =>
+  new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  }).format(value)
+
 export default function Services() {
   const regularServices: RegularService[] = useMemo(
     () => [
@@ -138,8 +148,8 @@ export default function Services() {
                       <p className="text-ddcece mb-4 flex-grow">{service.description}</p>
                       <div className="mt-auto">
                         <Badge className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-1.5 px-4">
-                          {"price" in service
-                            ? `R$ ${service.price.toFixed(2).replace(".", ",")}`
+                          {isPricedService(service)
+                            ? formatCurrency(service.price)
                             : service.priceLabel}
                         </Badge>
                       </div>
@@ -165,10 +175,10 @@ export default function Services() {
                       <p className="text-ddcece mb-4 flex-grow">{combo.description}</p>
                       <div className="mt-auto flex flex-col items-center">
                         <span className="text-gray-400 line-through text-sm mb-1">
-                          R$ {combo.originalPrice.toFixed(2).replace(".", ",")}
+                          {formatCurrency(combo.originalPrice)}
                         </span>
                         <Badge className="bg-blue-600 hover:bg-blue-700 text-white text-lg py-1.5 px-4">
-                          R$ {combo.price.toFixed(2).replace(".", ",")}
+                          {formatCurrency(combo.price)}
                         </Badge>
                       </div>
                     </CardContent>
