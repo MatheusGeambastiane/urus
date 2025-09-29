@@ -1,13 +1,18 @@
 {
+  
   "name": "urus-barber",
   "version": "0.1.0",
   "private": true,
+  "engines": { "node": ">=20", "npm": ">=10" },
   "scripts": {
+    "preinstall": "npm config delete http-proxy || true && npm config delete https-proxy || true",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ci:install": "if [ -f package-lock.json ]; then npm ci; else npm i --no-audit --no-fund; fi"
   },
+
   "dependencies": {
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-select": "^2.2.5",
