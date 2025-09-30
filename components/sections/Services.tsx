@@ -10,6 +10,7 @@ import {
   Package,
   Zap,
   Shield,
+  Bandage,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -81,6 +82,18 @@ export default function Services() {
         description: "Processo para clarear os fios e preparar para coloração.",
         price: 70,
         icon: <Zap className="w-8 h-8" />,
+      },
+      {
+        title: "Quick Massage",
+        description: "Massagem rápida ideal para aliviar tensões durante o dia.",
+        price: 25,
+        icon: <Sparkles className="w-8 h-8" />,
+      },
+      {
+        title: "Taping",
+        description: "Aplicação de bandagens funcionais para suporte muscular e alívio de dores.",
+        price: 40,
+        icon: <Bandage className="w-8 h-8" />,
       },
       {
         title: "Prótese Capilar",
