@@ -24,6 +24,12 @@ export default function Navigation() {
           <Link href="/#servicos" className="text-white hover:text-gray-300 transition">
             Serviços
           </Link>
+          <Link
+            href="/massoterapia-quick-massage-taping-salvador"
+            className="text-white hover:text-gray-300 transition"
+          >
+            Massoterapia & Taping
+          </Link>
           <Link href="/#localizacao" className="text-white hover:text-gray-300 transition">
             Localização
           </Link>
