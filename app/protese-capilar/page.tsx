@@ -77,7 +77,7 @@ const loadStructuredData = () => {
       name: "URUS Barbearia - Prótese Capilar Salvador",
       description:
         "Especialistas em prótese capilar em Salvador com aplicação personalizada, manutenção periódica e suporte completo.",
-      url: "https://urusbarber.com.br/protese-capilar",
+      url: "https://urusbarbearia.com.br/protese-capilar",
       telephone: "+55-71-92109-189",
       address: {
         "@type": "PostalAddress",
@@ -92,8 +92,7 @@ const loadStructuredData = () => {
         name: "Salvador",
       },
       sameAs: [
-        "https://www.instagram.com/urusbarbearia/",
-        "https://www.facebook.com/urusbarbearia",
+        "https://www.instagram.com/urus_barbearia/",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -147,13 +146,13 @@ export const metadata: Metadata = {
     "barbearia prótese capilar salvador",
   ],
   alternates: {
-    canonical: "https://urusbarber.com.br/protese-capilar",
+    canonical: "https://urusbarbearia.com.br/protese-capilar",
   },
   openGraph: {
     title: "Prótese capilar em Salvador | URUS Barbearia",
     description:
       "Especialistas em prótese capilar em Salvador com atendimento reservado, materiais premium e suporte contínuo.",
-    url: "https://urusbarber.com.br/protese-capilar",
+    url: "https://urusbarbearia.com.br/protese-capilar",
     type: "website",
     locale: "pt_BR",
     siteName: "URUS Barbearia",
