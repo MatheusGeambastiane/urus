@@ -164,7 +164,7 @@ function HairProsthesisPageHero() {
 
   return (
     <section className="relative min-h-[70vh] bg-black text-white">
-      <div className="absolute inset-0 bg-[url('/barbearia_fachada.jpg')] bg-cover bg-center opacity-30" aria-hidden />
+      <div className="absolute inset-0 bg-[url('/urus_protese_capilar_pagina.png')] bg-cover bg-center opacity-30" aria-hidden />
       <div className="relative z-10">
         <div className="container mx-auto px-4 py-32">
           <div className="max-w-3xl space-y-6">
