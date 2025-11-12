@@ -7,14 +7,18 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   // Title com foco local + principal serviço na frente
-  title:
-    "Prótese Capilar em Salvador | Massoterapia e Kinesio Taping – URUS Barbearia",
+  title: {
+    default: "Prótese Capilar em Salvador | Melhor Barbearia da Cidade Baixa",
+    template: "%s | URUS Barbearia Salvador",
+  },
   description:
-    "URUS Barbearia na Cidade Baixa (Mares), Salvador-BA. Especialistas em prótese capilar, massoterapia (relaxante e terapêutica) e kinesio taping. Profissionais qualificados, agendamento fácil e atendimento de alto padrão.",
+    "URUS Barbearia na Cidade Baixa (Mares), Salvador-BA. Especialistas em prótese capilar personalizada, cortes masculinos premium e terapias manuais para quem busca a melhor barbearia de Salvador.",
   // Keywords seguem pouco usadas pelo Google, mas úteis para outros motores
   keywords: [
     "prótese capilar em Salvador",
     "prótese capilar Salvador",
+    "barbearia em Salvador",
+    "melhor barbearia de Salvador",
     "massoterapia em Salvador",
     "massagem relaxante Salvador",
     "kinesio taping Salvador",
@@ -40,13 +44,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://urusbarbearia.com.br/",
     title:
-      "URUS Barbearia – Prótese Capilar, Massoterapia e Kinesio Taping em Salvador",
+      "URUS Barbearia – Prótese capilar e barbearia premiada em Salvador",
     description:
-      "Especialistas em prótese capilar, massoterapia e kinesio taping na Cidade Baixa (Mares), Salvador-BA.",
+      "Referência em prótese capilar, cortes masculinos e terapias manuais na Cidade Baixa (Mares), Salvador-BA.",
     siteName: "URUS Barbearia",
     images: [
       {
-        url: "/barbearia_fachada.jpg",
+        url: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
         width: 1200,
         height: 630,
         alt: "Fachada da URUS Barbearia na Cidade Baixa, Salvador",
@@ -56,10 +60,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "URUS Barbearia – Prótese Capilar, Massoterapia e Kinesio Taping em Salvador",
-    description:
-      "Atendimento especializado em Salvador-BA. Agende seu horário.",
-    images: ["/barbearia_fachada.jpg"],
+      "URUS Barbearia – Prótese capilar e cortes masculinos em Salvador",
+    description: "Atendimento especializado em Salvador-BA. Agende seu horário.",
+    images: ["https://urusbarbearia.com.br/barbearia_fachada.jpg"],
   },
   robots: {
     index: true,
@@ -177,12 +180,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 },
               ],
               priceRange: "$$",
-              sameAs: [
-                // adicione seus perfis reais:
-                // "https://www.google.com/maps?cid=SEU_CID",
-                // "https://www.instagram.com/seu_perfil",
-                // "https://www.facebook.com/seu_perfil",
-              ],
+              sameAs: ["https://www.instagram.com/urus_barbearia"],
               makesOffer: [
                 {
                   "@type": "Offer",

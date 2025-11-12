@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <span className="text-2xl font-bold">URUS</span>
-            <p className="text-ddcece mt-2">A melhor experiência em barbearia</p>
+            <p className="text-ddcece mt-2">Prótese capilar e barbearia premium em Salvador</p>
           </div>
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
             <Link href="#home" className="text-white hover:text-gray-300 transition">
@@ -41,4 +41,3 @@ export default function Footer() {
     </footer>
   )
 }
-

@@ -32,15 +32,13 @@ export default function Gallery() {
   return (
     <section id="espaco" className="py-20 bg-white text-black" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Nosso Espaço</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Nosso espaço em Salvador</h2>
 
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-lg text-gray-700 leading-relaxed">
             Projetado para oferecer conforto e estilo, nosso espaço combina design contemporâneo com funcionalidade.
-            Cada detalhe foi pensado para proporcionar uma experiência única, desde a iluminação cuidadosamente
-            posicionada até os equipamentos de última geração. Na URUS Barbearia, você encontra um ambiente minimalista
-            e sofisticado, onde pode relaxar enquanto nossos profissionais cuidam do seu visual com precisão e
-            dedicação.
+            Cada detalhe foi pensado para quem procura uma barbearia em Salvador com clima reservado, equipamentos de
+            ponta e receptivo acolhedor. Na URUS Barbearia, relaxar faz parte do ritual de transformação.
           </p>
         </div>
 
@@ -110,4 +108,3 @@ export default function Gallery() {
     </section>
   )
 }
-

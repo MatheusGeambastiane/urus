@@ -27,11 +27,7 @@ const loadHighlights = (): HighlightItem[] => {
         description:
           "Nossos especialistas foram treinados com marcas internacionais para garantir acabamento imperceptível e manutenção planejada em Salvador.",
       },
-      {
-        title: "Sala exclusiva e atendimento discreto",
-        description:
-          "Reservamos uma cabine climatizada para instalação da prótese capilar masculina ou feminina, preservando privacidade do início ao fim.",
-      },
+
       {
         title: "Materiais preparados para o clima de Salvador",
         description:
@@ -104,7 +100,7 @@ const loadStructuredData = () => {
               "@type": "Service",
               name: "Avaliação completa",
               description:
-                "Consulta presencial para entender necessidades de prótese capilar masculina ou feminina em Salvador.",
+                "Consulta presencial para entender necessidades de prótese capilar masculina em Salvador.",
             },
           },
           {
@@ -142,7 +138,7 @@ export const metadata: Metadata = {
     "prótese capilar em salvador",
     "manutenção de prótese capilar salvador",
     "prótese capilar masculina",
-    "prótese capilar feminina",
+    "prótese capilar em lauro de freitas ",
     "barbearia prótese capilar salvador",
   ],
   alternates: {
@@ -174,7 +170,7 @@ function HairProsthesisPageHero() {
             </h1>
             <p className="text-lg text-gray-200">
               Nossa barbearia na Cidade Baixa oferece avaliação completa, aplicação segura e manutenção periódica para quem
-              busca prótese capilar masculina ou feminina na capital baiana.
+              busca prótese capilar masculina na capital baiana.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8 py-6 text-lg">
@@ -291,24 +287,35 @@ export default function HairProsthesisPage() {
   const structuredData = loadStructuredData()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      <Navigation />
-      <main>
-        <HairProsthesisPageHero />
-        <SeoContentSection />
-        <HairProsthesis />
-        <AftercareSection />
-        <FAQ />
-        <Location />
-        <CallToActionSection />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-      {structuredData && (
-        <Script type="application/ld+json" id="hair-prosthesis-structured-data">
-          {JSON.stringify(structuredData)}
-        </Script>
-      )}
-    </div>
+    <>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17609739026" strategy="afterInteractive" />
+      <Script id="gtag-init-protese" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17609739026');
+        `}
+      </Script>
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+        <Navigation />
+        <main>
+          <HairProsthesisPageHero />
+          <SeoContentSection />
+          <HairProsthesis />
+          <AftercareSection />
+          <FAQ />
+          <Location />
+          <CallToActionSection />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+        {structuredData && (
+          <Script type="application/ld+json" id="hair-prosthesis-structured-data">
+            {JSON.stringify(structuredData)}
+          </Script>
+        )}
+      </div>
+    </>
   )
 }

@@ -11,15 +11,27 @@ export default function About() {
   return (
     <section id="sobre" className="py-20 bg-gradient-to-b from-gray-950 to-gray-900">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre Nós</h2>
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Sobre a URUS Barbearia em Salvador
+          </h2>
           <p className="text-lg text-ddcece leading-relaxed">
-            Bem-vindo à nossa barbearia, um espaço exclusivo no coração da cidade baixa, onde tradição e modernidade se
-            encontram para oferecer uma experiência única de cuidado masculino. Nosso compromisso é proporcionar não
-            apenas cortes impecáveis, mas momentos de relaxamento e transformação, em um ambiente sofisticado e
-            acolhedor. Aqui, cada cliente é tratado com atenção personalizada, garantindo resultados que elevam a
-            autoestima e o estilo.
+            Somos um estúdio-barbearia localizado na Cidade Baixa (Mares), eleito pelos clientes como referência em
+            cortes masculinos, relaxamento e prótese capilar em Salvador. Unimos tradição e tecnologia para entregar
+            resultados naturais e um atendimento consultivo.
           </p>
+          <p className="text-lg text-ddcece leading-relaxed">
+            Seja para uma transformação completa ou manutenção semanal, criamos experiências personalizadas com
+            produtos premium, sala climatizada e profissionais certificados. Por isso, muitos clientes nos consideram a
+            melhor barbearia de Salvador quando o assunto é cuidado masculino de alto padrão.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto mb-16 grid gap-4 md:grid-cols-2">
+          {["Atendimento humanizado com hora marcada", "Materiais aprovados para prótese capilar no clima soteropolitano", "Equipe fixa de barbeiros especialistas", "Integração com massoterapia, quick massage e taping"].map((benefit) => (
+            <div key={benefit} className="bg-gray-900/40 border border-gray-800 rounded-xl p-5 text-ddcece text-sm md:text-base">
+              {benefit}
+            </div>
+          ))}
         </div>
 
         {/* Barbers Carousel */}
@@ -57,4 +69,3 @@ export default function About() {
     </section>
   )
 }
-

@@ -4,7 +4,9 @@ export default function Location() {
   return (
     <section id="localizacao" className="py-20 bg-white text-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Localização e Horários</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Onde fica a URUS Barbearia em Salvador
+        </h2>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="h-96 rounded-lg overflow-hidden shadow-xl">
             <iframe
@@ -23,7 +25,11 @@ export default function Location() {
               <div>
                 <h3 className="text-xl font-bold mb-2">Endereço</h3>
                 <p className="text-gray-700">Avenida Conselheiro Zacarias, 7</p>
-                <p className="text-gray-700">Mares - Salvador</p>
+                <p className="text-gray-700">Mares - Cidade Baixa - Salvador/BA</p>
+                <p className="text-gray-600 mt-2">
+                  Fácil acesso para quem busca prótese capilar em Salvador ou deseja visitar a melhor barbearia da região
+                  metropolitana.
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -41,4 +47,3 @@ export default function Location() {
     </section>
   )
 }
-

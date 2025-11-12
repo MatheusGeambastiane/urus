@@ -135,7 +135,14 @@ export default function Services() {
   return (
     <section id="servicos" className="py-20 bg-gradient-to-b from-gray-900 to-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Nossos Serviços</h2>
+        <div className="max-w-3xl mx-auto text-center mb-8 space-y-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Melhor barbearia de Salvador</p>
+          <h2 className="text-3xl md:text-4xl font-bold">Serviços da URUS Barbearia em Salvador</h2>
+          <p className="text-lg text-ddcece">
+            Aplicamos prótese capilar, cuidamos da sua barba e oferecemos terapias de bem-estar no mesmo endereço,
+            garantindo praticidade para quem busca uma barbearia completa na capital baiana.
+          </p>
+        </div>
 
         <div className="flex justify-center mb-10">
           <Tabs defaultValue="services" className="w-full max-w-4xl">
