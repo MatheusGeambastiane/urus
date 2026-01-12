@@ -402,16 +402,16 @@ export default function MotociclistaPage() {
                 <MapPin className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Endereço</h3>
-                  <p className="text-gray-300">Avenida Conselheiro Zacarias, 7</p>
-                  <p className="text-gray-300">Mares - Salvador</p>
+                  <p className="text-gray-300">Rua rio de São Pedro, 26</p>
+                  <p className="text-gray-300">Graça - Salvador</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Horário de Funcionamento</h3>
-                  <p className="text-gray-300">Segunda a Sexta: 9h às 18h</p>
-                  <p className="text-gray-300">Sábado: 9h às 16h</p>
+                  <p className="text-gray-300">Segunda a Sexta: 9h às 20h</p>
+                  <p className="text-gray-300">Sábado: 9h às 18h</p>
                   <p className="text-gray-300">Domingo: Fechado</p>
                 </div>
               </div>

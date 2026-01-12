@@ -2,31 +2,29 @@ import type { Metadata } from "next"
 import Script from "next/script"
 import Navigation from "@/components/Navigation"
 import Hero from "@/components/sections/Hero"
-import Discount from "@/components/sections/Discount"
 import About from "@/components/sections/About"
 import Services from "@/components/sections/Services"
-import Gallery from "@/components/sections/Gallery"
-import SeoHighlights from "@/components/sections/SeoHighlights"
+import Team from "@/components/sections/Team"
 import Location from "@/components/sections/Location"
 import Footer from "@/components/sections/Footer"
 import WhatsAppButton from "@/components/WhatsAppButton"
 
 export const metadata: Metadata = {
-  title: "Prótese capilar em Salvador | URUS Barbearia",
+  title: "Barbearia na Graça | Melhor Barbearia de Salvador | URUS",
   description:
-    "URUS Barbearia é referência em prótese capilar e cortes masculinos na Cidade Baixa, em Salvador. Atendimento premium, sala exclusiva e especialistas reconhecidos na capital baiana.",
+    "URUS Barbearia na Graça, Salvador. A melhor barbearia de Salvador para corte, barba e prótese capilar, com atendimento para quem busca barbearia na Barra e barbearia em Salvador.",
   keywords: [
-    "prótese capilar em Salvador",
-    "barbearia em Salvador",
+    "barbearia na Graça",
     "melhor barbearia de Salvador",
-    "barbearia Cidade Baixa",
-    "prótese capilar masculina Salvador",
+    "barbearia na Barra",
+    "barbearia em Salvador",
+    "barbearia Salvador",
   ],
   alternates: { canonical: "https://urusbarbearia.com.br/" },
   openGraph: {
-    title: "URUS Barbearia | Prótese capilar e barbearia em Salvador",
+    title: "URUS Barbearia | Barbearia na Graça e melhor barbearia de Salvador",
     description:
-      "Clínica-barbearia com prótese capilar personalizada, cortes premium e terapias manuais em Salvador (BA).",
+      "Barbearia em Salvador com foco na Graça, cortes premium, barba e prótese capilar. Atendimento para quem busca barbearia na Barra.",
     url: "https://urusbarbearia.com.br/",
     type: "website",
     images: [
@@ -55,11 +53,9 @@ export default function BarberiaLandingPage() {
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <Navigation />
         <Hero />
-        <Discount />
         <About />
-        <Gallery />
         <Services />
-        <SeoHighlights />
+        <Team />
         <Location />
         <Footer />
         <WhatsAppButton />

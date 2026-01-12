@@ -4,7 +4,7 @@ const highlights = [
   {
     title: "Melhor barbearia de Salvador",
     description:
-      "Estrutura completa na Cidade Baixa com sala para prótese capilar, barbearia premium e área de bem-estar.",
+      "Estrutura completa na Graça com sala para prótese capilar, barbearia premium e área de bem-estar.",
     icon: ShieldCheck,
   },
   {
@@ -21,19 +21,6 @@ const highlights = [
   },
 ]
 
-const socialProof = [
-  {
-    title: "Clientes satisfeitos",
-    content:
-      "Mais de 500 procedimentos de prótese capilar realizados com avaliações 5 estrelas no atendimento personalizado.",
-  },
-  {
-    title: "Reconhecimento local",
-    content:
-      "Presença constante em indicações de barbearia em Salvador graças ao cuidado com moradores e turistas.",
-  },
-]
-
 export default function SeoHighlights() {
   return (
     <section id="porque-urus" className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
@@ -41,7 +28,7 @@ export default function SeoHighlights() {
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
           <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Prótese capilar em Salvador</p>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Por que a URUS é referência entre as melhores barbearias de Salvador
+            Porque a URUS é referência entre as melhores barbearias de Salvador
           </h2>
           <p className="text-lg text-gray-200">
             Credibilidade construída com resultados naturais, processos documentados e proximidade com nossos clientes
@@ -70,7 +57,7 @@ export default function SeoHighlights() {
           ))}
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 mt-12" itemScope itemType="https://schema.org/Review">
+        {/* <div className="grid gap-6 md:grid-cols-2 mt-12" itemScope itemType="https://schema.org/Review">
           {socialProof.map(({ title, content }) => (
             <blockquote key={title} className="bg-black/40 border border-white/5 rounded-2xl p-6">
               <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-2">{title}</p>
@@ -79,9 +66,8 @@ export default function SeoHighlights() {
               </p>
             </blockquote>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )
 }
-

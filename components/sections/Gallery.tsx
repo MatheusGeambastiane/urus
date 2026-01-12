@@ -59,7 +59,7 @@ export default function Gallery() {
             <div className="p-4 bg-gray-50">
               <h3 className="text-xl font-semibold mb-2">Fácil localização</h3>
               <p className="text-gray-600">
-                Nosso espaço está localizado no coração da Cidade Baixa, com estacionamento na rua.
+                Nosso espaço está localizado no bairro da Graça, com estacionamento na rua.
               </p>
             </div>
           </div>

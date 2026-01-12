@@ -8,11 +8,11 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   // Title com foco local + principal serviço na frente
   title: {
-    default: "Prótese Capilar em Salvador | Melhor Barbearia da Cidade Baixa",
+    default: "Barbearia na Graça | Melhor Barbearia de Salvador | URUS",
     template: "%s | URUS Barbearia Salvador",
   },
   description:
-    "URUS Barbearia na Cidade Baixa (Mares), Salvador-BA. Especialistas em prótese capilar personalizada, cortes masculinos premium e terapias manuais para quem busca a melhor barbearia de Salvador.",
+    "URUS Barbearia na Graça, Salvador-BA. A melhor barbearia de Salvador para cortes, barba e prótese capilar, atendendo também quem busca barbearia na Barra e barbearia em Salvador.",
   // Keywords seguem pouco usadas pelo Google, mas úteis para outros motores
   keywords: [
     "prótese capilar em Salvador",
@@ -24,8 +24,10 @@ export const metadata: Metadata = {
     "kinesio taping Salvador",
     "taping em Salvador",
     "barbearia Salvador",
-    "barbearia Cidade Baixa",
-    "barbearia Mares",
+    "barbearia na Graça",
+    "barbearia na Barra",
+    "barbearia em Salvador",
+    "melhor barbearia de Salvador",
     "Urus Barbearia",
   ],
   authors: [{ name: "URUS Barbearia" }],
@@ -44,24 +46,24 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://urusbarbearia.com.br/",
     title:
-      "URUS Barbearia – Prótese capilar e barbearia premiada em Salvador",
+      "URUS Barbearia – Barbearia na Graça e melhor barbearia de Salvador",
     description:
-      "Referência em prótese capilar, cortes masculinos e terapias manuais na Cidade Baixa (Mares), Salvador-BA.",
+      "Referência em cortes masculinos, barba e prótese capilar na Graça, Salvador-BA, com atendimento para quem busca barbearia na Barra e barbearia em Salvador.",
     siteName: "URUS Barbearia",
     images: [
       {
         url: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
         width: 1200,
         height: 630,
-        alt: "Fachada da URUS Barbearia na Cidade Baixa, Salvador",
+        alt: "Fachada da URUS Barbearia na Graça, Salvador",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "URUS Barbearia – Prótese capilar e cortes masculinos em Salvador",
-    description: "Atendimento especializado em Salvador-BA. Agende seu horário.",
+      "URUS Barbearia – Barbearia na Graça e melhor barbearia de Salvador",
+    description: "Barbearia em Salvador com foco na Graça e atendimento para clientes da Barra. Agende seu horário.",
     images: ["https://urusbarbearia.com.br/barbearia_fachada.jpg"],
   },
   robots: {
@@ -120,7 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               telephone: "+55-71-9210-9189",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Avenida Conselheiro Zacarias, 7",
+                streetAddress: "Rua rio de São Pedro, 26",
                 addressLocality: "Salvador",
                 addressRegion: "BA",
                 postalCode: "40445-000",
@@ -133,8 +135,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               },
               areaServed: [
                 { "@type": "City", name: "Salvador" },
-                "Cidade Baixa",
-                "Mares",
+                "Bairro da Graça",
+                "Graça",
                 "Bonfim",
                 "Ribeira",
                 "Roma",

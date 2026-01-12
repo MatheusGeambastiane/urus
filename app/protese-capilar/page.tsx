@@ -77,7 +77,7 @@ const loadStructuredData = () => {
       telephone: "+55-71-92109-189",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Avenida Conselheiro Zacarias, 7",
+        streetAddress: "Rua rio de São Pedro, 26",
         addressLocality: "Salvador",
         addressRegion: "BA",
         postalCode: "40450-110",
@@ -131,23 +131,27 @@ const loadStructuredData = () => {
 }
 
 export const metadata: Metadata = {
-  title: "Prótese capilar em Salvador | Procedimento completo na URUS Barbearia",
+  title: "Prótese capilar em Salvador | Barbearia na Graça | URUS",
   description:
-    "Conheça o passo a passo da prótese capilar em Salvador na URUS Barbearia: avaliação, aplicação, manutenção e cuidados para fios sempre naturais.",
+    "Prótese capilar em Salvador na URUS Barbearia na Graça. Atendimento da melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
   keywords: [
     "prótese capilar em salvador",
     "manutenção de prótese capilar salvador",
     "prótese capilar masculina",
     "prótese capilar em lauro de freitas ",
     "barbearia prótese capilar salvador",
+    "barbearia na Graça",
+    "melhor barbearia de Salvador",
+    "barbearia na Barra",
+    "barbearia em Salvador",
   ],
   alternates: {
     canonical: "https://urusbarbearia.com.br/protese-capilar",
   },
   openGraph: {
-    title: "Prótese capilar em Salvador | URUS Barbearia",
+    title: "Prótese capilar em Salvador | Barbearia na Graça | URUS",
     description:
-      "Especialistas em prótese capilar em Salvador com atendimento reservado, materiais premium e suporte contínuo.",
+      "Prótese capilar em Salvador na URUS Barbearia na Graça. Melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
     url: "https://urusbarbearia.com.br/protese-capilar",
     type: "website",
     locale: "pt_BR",
@@ -169,7 +173,7 @@ function HairProsthesisPageHero() {
               Recupere volume e confiança com a prótese capilar exclusiva da URUS Barbearia
             </h1>
             <p className="text-lg text-gray-200">
-              Nossa barbearia na Cidade Baixa oferece avaliação completa, aplicação segura e manutenção periódica para quem
+              Nossa barbearia na Graça oferece avaliação completa, aplicação segura e manutenção periódica para quem
               busca prótese capilar masculina na capital baiana.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

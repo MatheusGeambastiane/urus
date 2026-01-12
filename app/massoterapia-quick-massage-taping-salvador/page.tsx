@@ -32,7 +32,7 @@ const fallbackContent: MassageLandingContent = {
   hero: {
     title: "Quick Massage e Kinesio Taping em Salvador",
     subtitle:
-      "Atendimento rápido, alívio imediato e resultados duradouros com profissionais certificados na Cidade Baixa.",
+      "Atendimento rápido, alívio imediato e resultados duradouros com profissionais certificados na Graça.",
     description:
       "Na URUS Barbearia, unimos massoterapia express com taping terapêutico para cuidar da sua postura, dores musculares e stress no coração de Salvador.",
     ctaLabel: "Agendar avaliação pelo WhatsApp",
@@ -98,7 +98,7 @@ const fallbackContent: MassageLandingContent = {
     },
   ],
   seoParagraphs: [
-    "Buscando massoterapia em Salvador com atendimento de confiança? A URUS Barbearia reúne quick massage, massagem relaxante e taping terapêutico na Cidade Baixa para você cuidar do corpo com praticidade.",
+    "Buscando massoterapia em Salvador com atendimento de confiança? A URUS Barbearia reúne quick massage, massagem relaxante e taping terapêutico na Graça para você cuidar do corpo com praticidade.",
     "A quick massage é perfeita para quem precisa aliviar dores no pescoço, ombros e coluna rapidamente. Com técnicas de shiatsu e massoterapia, focamos nos principais pontos de tensão, devolvendo energia para o seu dia.",
     "O kinesio taping complementa o tratamento porque atua na estabilização muscular, corrige postura e acelera a recuperação de lesões esportivas.",
   ],
@@ -121,14 +121,14 @@ const createMassageLandingContent = (): MassageLandingContent => {
           telephone: "+55-71-9210-9189",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Avenida Conselheiro Zacarias, 7",
+            streetAddress: "Rua rio de São Pedro, 26",
             addressLocality: "Salvador",
             addressRegion: "BA",
             postalCode: "40445-000",
             addressCountry: "BR",
           },
         },
-        areaServed: ["Salvador", "Cidade Baixa", "Mares", "Bonfim", "Ribeira"],
+        areaServed: ["Salvador", "Bairro da Graça", "Graça", "Bonfim", "Ribeira"],
         offers: [
           {
             "@type": "Offer",
@@ -170,15 +170,19 @@ const createMassageLandingContent = (): MassageLandingContent => {
 export const metadata: Metadata = {
   title: "Quick Massage e Taping em Salvador | Massoterapia a partir de R$ 25 | URUS",
   description:
-    "Quick massage a partir de R$ 25 e kinesio taping a partir de R$ 40 na Cidade Baixa, Salvador-BA. Massoterapeutas certificados, atendimento rápido e personalizado na URUS Barbearia.",
+    "Quick massage e taping na URUS Barbearia na Graça, Salvador-BA. Atendimento na melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
   keywords: [
     "quick massage salvador",
     "massoterapia salvador",
     "taping salvador",
-    "kinesio taping cidade baixa",
+    "kinesio taping graça",
     "massagem express salvador",
     "massagem para dor nas costas salvador",
-    "massoterapia na cidade baixa",
+    "massoterapia na graça",
+    "barbearia na Graça",
+    "melhor barbearia de Salvador",
+    "barbearia na Barra",
+    "barbearia em Salvador",
   ],
   alternates: {
     canonical: "https://urusbarbearia.com.br/massoterapia-quick-massage-taping-salvador",
@@ -188,7 +192,7 @@ export const metadata: Metadata = {
     url: "https://urusbarbearia.com.br/massoterapia-quick-massage-taping-salvador",
     title: "Quick Massage e Taping em Salvador | URUS Barbearia",
     description:
-      "Quick massage a partir de R$ 25 e taping terapêutico a partir de R$ 40 na Cidade Baixa, Salvador. Reserve sua sessão na URUS Barbearia.",
+      "Quick massage e taping na URUS Barbearia na Graça. Atendimento da melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
     locale: "pt_BR",
     siteName: "URUS Barbearia",
     images: [
@@ -203,7 +207,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Quick Massage e Taping em Salvador | URUS Barbearia",
-    description: "Massoterapia express e kinesio taping na Cidade Baixa. Sessões rápidas com especialistas.",
+    description: "Massoterapia na Graça, Salvador. Atendimento da melhor barbearia de Salvador e para quem busca barbearia na Barra.",
     images: ["/barbearia_fachada.jpg"],
   },
 }
@@ -273,7 +277,7 @@ export default function QuickMassageTapingPage() {
 
         <section className="container mx-auto mt-20 px-4 text-gray-200">
           <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            Massoterapia completa na Cidade Baixa, Salvador-BA
+            Massoterapia completa na Graça, Salvador-BA
           </h2>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {content.seoParagraphs.map((paragraph, index) => (
@@ -346,7 +350,7 @@ export default function QuickMassageTapingPage() {
 
         <section id="localizacao" className="container mx-auto mt-20 px-4">
           <div className="rounded-3xl border border-white/10 bg-black/40 p-8 text-white shadow-xl">
-            <h2 className="text-3xl font-semibold text-white md:text-4xl">Estamos em Mares, Salvador</h2>
+            <h2 className="text-3xl font-semibold text-white md:text-4xl">Estamos na Graça, Salvador</h2>
             <p className="mt-3 text-gray-200">
               Fácil acesso pela Avenida Fernandes da Cunha, próximo à Baixa do Bonfim e à Ribeira. Entre em contato para combinar horários especiais ou atendimento in company.
             </p>
@@ -364,4 +368,3 @@ export default function QuickMassageTapingPage() {
     </div>
   )
 }
-
