@@ -24,7 +24,7 @@ export default function Services() {
         { title: "Pé de cabelo", price: 20 },
         { title: "Platinado", price: 120 },
         { title: "Hidratação", price: 30 },
-        { title: "Progressiva/Botox capilar", price: 110 },
+        { title: "Progressiva/ Desondulação", price: 110 },
         { title: "Pigmentação", price: 30 },
         { title: "Prótese capilar", price: 1800 },
       ],
