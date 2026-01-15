@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
@@ -91,6 +92,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17609739026"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17609739026');
+gtag('event', 'conversion', {'send_to': 'AW-17609739026/OYd9CI3rkeQbEJKW_cxB'});
+            `.trim(),
+          }}
+        />
         {/* WebSite + SearchAction (para sitelinks) */}
         <script
           type="application/ld+json"
