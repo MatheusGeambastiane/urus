@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="relative w-full h-72 sm:h-96 md:h-[420px]">
             <Image
-              src="/barbearia.png"
+              src="/urus_barbearia_espera.jpg"
               alt="Interior da URUS Barbearia"
               fill
               className="rounded-[20px] object-cover"
