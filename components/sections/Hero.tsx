@@ -1,6 +1,28 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+
+function gtag_report_conversion(url?: string) {
+  const callback = () => {
+    if (typeof url !== "undefined") {
+      window.location.href = url
+    }
+  }
+
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
+  if (typeof gtag === "function") {
+    gtag("event", "conversion", {
+      send_to: "AW-17609739026/6g_dCJ7Y4-QbEJKW_cxB",
+      event_callback: callback,
+    })
+  } else {
+    callback()
+  }
+
+  return false
+}
 
 export default function Hero() {
   return (
@@ -15,7 +37,12 @@ export default function Hero() {
             <p className="text-lg md:text-xl text-gray-200 mb-6">
               Mais que um corte, uma experiência
             </p>
-            <Link href="https://wa.me/557192109189" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://wa.me/557192109189"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => gtag_report_conversion()}
+            >
               <Button className="bg-[#EBEBEB] text-[#030304] border-0 px-8 py-6 text-lg font-semibold rounded-[25px] shadow-[0_12px_30px_rgba(235,235,235,0.25)] hover:opacity-90 hover:scale-[1.02] transition">
                 Agende agora
               </Button>
