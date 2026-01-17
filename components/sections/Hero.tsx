@@ -38,7 +38,7 @@ export default function Hero() {
               Mais que um corte, uma experiência
             </p>
             <Link
-              href="https://wa.me/557192109189"
+              href="https://agenda.urusbarbearia.com.br/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => gtag_report_conversion()}
