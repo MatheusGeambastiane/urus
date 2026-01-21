@@ -2,7 +2,6 @@ import Image from "next/image"
 
 const barbers = [
   { name: "Gustavo", role: "Barbeiro Profissional", image: "/gustavo_barbeiro_urus_barbearia_salvador.jpg" },
-  { name: "Everton", role: "Barbeiro Profissional", image: "/everton_mendes_barbeiro_urus_barbearia_salvador.jpg" },
   { name: "Janice", role: "Massoterapeuta", image: "/janice_gonçalves_massoterapeuta_urus_barbearia_salvador.jpg" },
 ]
 

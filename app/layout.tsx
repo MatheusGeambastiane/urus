@@ -141,7 +141,7 @@ gtag('event', 'conversion', {'send_to': 'AW-17609739026/OYd9CI3rkeQbEJKW_cxB'});
               telephone: "+55-71-9210-9189",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Rua rio de São Pedro, 26",
+                streetAddress: "Rua Rio de São Pedro, 26",
                 addressLocality: "Salvador",
                 addressRegion: "BA",
                 postalCode: "40445-000",

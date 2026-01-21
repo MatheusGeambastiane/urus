@@ -14,7 +14,7 @@ export default function Head() {
               telephone: "+557192109189",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Rua rio de São Pedro, 26",
+                streetAddress: "Rua Rio de São Pedro, 26",
                 addressLocality: "Salvador",
                 addressRegion: "BA",
                 postalCode: "40445-000",
