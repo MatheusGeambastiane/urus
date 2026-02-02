@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Script from "next/script"
 import { Geist, Geist_Mono } from "next/font/google"
+import { Suspense } from "react"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import "./globals.css"
 
@@ -282,7 +283,9 @@ gtag('config', 'AW-17609739026');
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         {children}
       </body>
     </html>
