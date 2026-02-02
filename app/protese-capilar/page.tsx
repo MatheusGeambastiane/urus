@@ -292,15 +292,6 @@ export default function HairProsthesisPage() {
 
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17609739026" strategy="afterInteractive" />
-      <Script id="gtag-init-protese" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17609739026');
-        `}
-      </Script>
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <Navigation />
         <main>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Script from "next/script"
 import Navigation from "@/components/Navigation"
 import Hero from "@/components/sections/Hero"
 import About from "@/components/sections/About"
@@ -41,15 +40,6 @@ export const metadata: Metadata = {
 export default function BarberiaLandingPage() {
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17609739026" strategy="afterInteractive" />
-      <Script id="gtag-init-home" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17609739026');
-        `}
-      </Script>
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
         <Navigation />
         <Hero />
