@@ -402,7 +402,7 @@ export default function MotociclistaPage() {
                 <MapPin className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-bold mb-2">Endereço</h3>
-                  <p className="text-gray-300">Rua Rio de São Pedro, 26</p>
+                  <p className="text-gray-300">Rua Rio de São Pedro, 2</p>
                   <p className="text-gray-300">Graça - Salvador</p>
                 </div>
               </div>

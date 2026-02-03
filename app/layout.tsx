@@ -143,7 +143,7 @@ gtag('config', 'AW-17609739026');
               telephone: "+55-71-9210-9189",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Rua Rio de São Pedro, 26",
+                streetAddress: "Rua Rio de São Pedro, 2",
                 addressLocality: "Salvador",
                 addressRegion: "BA",
                 postalCode: "40445-000",

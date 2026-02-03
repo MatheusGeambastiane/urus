@@ -77,7 +77,7 @@ const loadStructuredData = () => {
       telephone: "+55-71-92109-189",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Rua Rio de São Pedro, 26",
+        streetAddress: "Rua Rio de São Pedro, 2",
         addressLocality: "Salvador",
         addressRegion: "BA",
         postalCode: "40450-110",
