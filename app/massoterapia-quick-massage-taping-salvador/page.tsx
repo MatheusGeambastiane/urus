@@ -121,7 +121,7 @@ const createMassageLandingContent = (): MassageLandingContent => {
           telephone: "+55-71-9210-9189",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Rua Rio de São Pedro, 2",
+            streetAddress: "Rua Rio de São Pedro, 1",
             addressLocality: "Salvador",
             addressRegion: "BA",
             postalCode: "40445-000",

@@ -24,7 +24,7 @@ export default function Location() {
               <MapPin className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-bold mb-2">Endereço</h3>
-                <p className="text-gray-700">Rua Rio de São Pedro, 2</p>
+                <p className="text-gray-700">Rua Rio de São Pedro, 1</p>
                 <p className="text-gray-700">Graça - Salvador/BA</p>
                 <p className="text-gray-600 mt-2">
                   Fácil acesso para quem busca prótese capilar em Salvador ou deseja visitar a melhor barbearia da região
