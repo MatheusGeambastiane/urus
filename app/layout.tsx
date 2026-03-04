@@ -81,8 +81,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: "/urus_logo.png",
+    shortcut: "/urus_logo.png",
     apple: "/apple-icon.png",
   },
   verification: {

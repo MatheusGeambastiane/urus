@@ -1,7 +1,7 @@
 export default function Head() {
     return (
       <>
-        <link rel="icon" href="/favicon.png" sizes="any" />
+        <link rel="icon" href="/urus_logo.png" sizes="any" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

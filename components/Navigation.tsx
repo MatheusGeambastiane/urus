@@ -34,9 +34,10 @@ export default function Navigation() {
             href="https://agenda.urusbarbearia.com.br/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2 rounded-md font-medium hover:opacity-90 transition"
           >
-            Agende seu horário
+            <Button className="bg-[#EBEBEB] text-[#030304] border-0 px-8 py-6 text-lg font-semibold rounded-[25px] shadow-[0_12px_30px_rgba(235,235,235,0.25)] hover:opacity-90 hover:scale-[1.02] transition">
+              Agende agora
+            </Button>
           </Link>
         </div>
         <Button variant="ghost" className="md:hidden">
@@ -54,4 +55,3 @@ export default function Navigation() {
     </nav>
   )
 }
-
