@@ -27,8 +27,7 @@ export default function Location() {
                 <p className="text-gray-700">Rua Rio de São Pedro, 1</p>
                 <p className="text-gray-700">Graça - Salvador/BA</p>
                 <p className="text-gray-600 mt-2">
-                  Fácil acesso para quem busca prótese capilar em Salvador ou deseja visitar a melhor barbearia da região
-                  metropolitana.
+                  Fácil acesso e ambiente preparado para receber você com conforto.
                 </p>
               </div>
             </div>

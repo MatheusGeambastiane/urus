@@ -25,13 +25,13 @@ const loadHighlights = (): HighlightItem[] => {
       {
         title: "Equipe certificada em prótese capilar",
         description:
-          "Nossos especialistas foram treinados com marcas internacionais para garantir acabamento imperceptível e manutenção planejada em Salvador.",
+          "Aplicacao precisa, acabamento natural e manutencao planejada.",
       },
 
       {
         title: "Materiais preparados para o clima de Salvador",
         description:
-          "Utilizamos próteses capilares com base respirável, fios 100% humanos e adesivos hipoalergênicos que resistem à umidade e ao calor da capital baiana.",
+          "Bases respiráveis, fios humanos e adesivos pensados para a rotina local.",
       },
     ]
   } catch (error) {
@@ -46,17 +46,17 @@ const loadAftercareTips = (): AftercareTip[] => {
       {
         title: "Higienização semanal",
         content:
-          "Lave sua prótese capilar com xampus suaves e finalize com condicionador específico para fios humanos, sempre com água fria ou morna.",
+          "Lave com produtos suaves e agua fria ou morna.",
       },
       {
         title: "Manutenção profissional a cada 20 dias",
         content:
-          "Retorne à URUS Barbearia para revisão de fixação, limpeza profunda e troca de adesivos, mantendo conforto e aparência natural.",
+          "Retorne para revisao, limpeza e troca adesiva quando necessario.",
       },
       {
         title: "Proteção diária",
         content:
-          "Evite fontes de calor direto como chapinhas e secadores quentes; utilize leave-ins com filtro UV para proteger a prótese capilar em Salvador.",
+          "Evite calor excessivo e use finalizadores com protecao UV.",
       },
     ]
   } catch (error) {
@@ -87,8 +87,11 @@ const loadStructuredData = () => {
         "@type": "City",
         name: "Salvador",
       },
-      sameAs: [
-        "https://www.instagram.com/urus_barbearia/",
+      sameAs: ["https://www.instagram.com/urus_barbearia/"],
+      keywords: [
+        "protese capilar em Salvador",
+        "melhor lugar para protese capilar em Salvador",
+        "protese capilar na Graca",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -131,31 +134,45 @@ const loadStructuredData = () => {
 }
 
 export const metadata: Metadata = {
-  title: "Prótese capilar em Salvador | Barbearia na Graça | URUS",
+  title: "Protese capilar em Salvador | Referencia na Graca para avaliacao e manutencao",
   description:
-    "Prótese capilar em Salvador na URUS Barbearia na Graça. Atendimento da melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
+    "Protese capilar em Salvador com avaliacao, aplicacao e manutencao na URUS Barbearia, na Graca. Pagina pensada para quem busca o melhor lugar para protese capilar em Salvador.",
   keywords: [
-    "prótese capilar em salvador",
-    "manutenção de prótese capilar salvador",
-    "prótese capilar masculina",
-    "prótese capilar em lauro de freitas ",
-    "barbearia prótese capilar salvador",
-    "barbearia na Graça",
-    "melhor barbearia de Salvador",
-    "barbearia na Barra",
-    "barbearia em Salvador",
+    "protese capilar em salvador",
+    "melhor lugar para protese capilar em salvador",
+    "onde fazer protese capilar em salvador",
+    "manutencao de protese capilar salvador",
+    "protese capilar masculina",
+    "aplicacao de protese capilar salvador",
+    "protese capilar na graca",
+    "urus barbearia protese capilar",
   ],
   alternates: {
     canonical: "https://urusbarbearia.com.br/protese-capilar",
   },
   openGraph: {
-    title: "Prótese capilar em Salvador | Barbearia na Graça | URUS",
+    title: "Protese capilar em Salvador | URUS Barbearia na Graca",
     description:
-      "Prótese capilar em Salvador na URUS Barbearia na Graça. Melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
+      "Servico de protese capilar em Salvador com avaliacao, aplicacao e manutencao especializada na Graca.",
     url: "https://urusbarbearia.com.br/protese-capilar",
     type: "website",
     locale: "pt_BR",
     siteName: "URUS Barbearia",
+    images: [
+      {
+        url: "https://urusbarbearia.com.br/urus_protese_capilar_pagina.png",
+        width: 1200,
+        height: 630,
+        alt: "Servico de protese capilar da URUS Barbearia em Salvador",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Protese capilar em Salvador | URUS Barbearia",
+    description:
+      "Avaliacao, aplicacao e manutencao de protese capilar em Salvador com atendimento na Graca.",
+    images: ["https://urusbarbearia.com.br/urus_protese_capilar_pagina.png"],
   },
 }
 
@@ -173,8 +190,7 @@ function HairProsthesisPageHero() {
               Recupere volume e confiança com a prótese capilar exclusiva da URUS Barbearia
             </h1>
             <p className="text-lg text-gray-200">
-              Nossa barbearia na Graça oferece avaliação completa, aplicação segura e manutenção periódica para quem
-              busca prótese capilar masculina na capital baiana.
+              Avaliacao, aplicacao e manutencao com acabamento natural na Graca, em Salvador.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild className="bg-blue-600 hover:bg-blue-700 px-8 py-6 text-lg">
@@ -219,7 +235,7 @@ function AftercareSection() {
         <div className="max-w-3xl mx-auto text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">Como preservar sua prótese capilar por mais tempo</h2>
           <p className="text-lg text-gray-300">
-            Reunimos orientações essenciais para manter a prótese capilar sempre natural, confortável e alinhada ao clima de Salvador.
+            Cuidados simples para manter conforto, durabilidade e naturalidade.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
@@ -239,23 +255,20 @@ function AftercareSection() {
 }
 
 function SeoContentSection() {
-  const paragraphs = [
-    "A prótese capilar é a alternativa mais rápida para quem deseja recuperar a autoestima sem intervenções cirúrgicas. Na URUS Barbearia, realizamos uma avaliação detalhada para identificar densidade, formato da linha frontal e rotina de cuidados do cliente, indicando a base e o método de fixação mais adequados.",
-    "Atendemos homens e mulheres que buscam prótese capilar em Salvador para tratar calvície parcial ou total. O procedimento é personalizado, com próteses importadas que podem ser recortadas no próprio couro cabeludo para garantir acabamento perfeito.",
-    "Além da aplicação, oferecemos treinamento sobre manutenção domiciliar, cronograma de retorno e recomendações de produtos aprovados pelos nossos especialistas. Assim, você tem segurança de que o investimento terá alta durabilidade e conforto.",
-  ]
-
   return (
     <section id="processo-protese" className="py-20 bg-white text-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto space-y-6 text-lg leading-relaxed text-gray-700">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-gray-700">
+            <p>
+              A protese capilar da URUS foi pensada para quem quer recuperar a imagem com rapidez, discricao e rotina
+              simples de manutencao.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 md:p-8">
             <h3 className="text-2xl font-semibold mb-3 flex items-center gap-2 text-gray-900">
               <CheckCircle2 className="h-5 w-5 text-blue-600" aria-hidden />
-              Benefícios imediatos da prótese capilar URUS
+              O que voce ganha com a protese capilar URUS
             </h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
               <li>Aplicação rápida com retorno às atividades no mesmo dia.</li>
@@ -275,7 +288,7 @@ function CallToActionSection() {
       <div className="container mx-auto px-4 text-center space-y-6">
         <h2 className="text-3xl md:text-4xl font-bold">Pronto para transformar o visual?</h2>
         <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-          Agende uma avaliação gratuita e descubra como nossa prótese capilar em Salvador pode devolver volume, densidade e naturalidade ao seu cabelo.
+          Agende uma avaliacao gratuita e descubra a melhor solucao para o seu caso.
         </p>
         <Button asChild size="lg" className="bg-white text-blue-800 hover:bg-blue-100 px-10 py-6 text-lg font-semibold">
           <a href="https://wa.me/557192109189" target="_blank" rel="noopener noreferrer">

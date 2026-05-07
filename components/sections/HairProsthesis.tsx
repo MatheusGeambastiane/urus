@@ -19,17 +19,17 @@ const loadSteps = (): Step[] => {
       {
         title: "Avaliação completa em Salvador",
         description:
-          "Entendemos suas necessidades, analisamos couro cabeludo e estilo de vida para definir a melhor prótese capilar.",
+          "Analise do couro cabeludo, rotina e objetivo estetico.",
       },
       {
         title: "Aplicação precisa e confortável",
         description:
-          "Instalação segura com técnicas atualizadas, acabamento natural e instruções de cuidado para manter o visual impecável.",
+          "Instalacao segura com acabamento natural e orientacoes essenciais.",
       },
       {
         title: "Manutenção planejada",
         description:
-          "Agendamos retornos periódicos na URUS Barbearia para higienização, ajustes e troca adesiva quando necessário.",
+          "Retornos programados para limpeza, ajuste e troca adesiva.",
       },
     ]
   } catch (error) {
@@ -44,17 +44,17 @@ const loadBenefits = (): Benefit[] => {
       {
         title: "Materiais premium",
         detail:
-          "Utilizamos próteses com base ultrafina, fios 100% humanos e adesivos hipoalergênicos indicados para o clima de Salvador.",
+          "Base ultrafina, fios humanos e adesivos adequados ao clima local.",
       },
       {
         title: "Resultado invisível",
         detail:
-          "Acabamentos com linha frontal realista, densidade equilibrada e personalização de tonalidade para combinar com sua pele.",
+          "Linha frontal realista e personalizacao para um visual natural.",
       },
       {
         title: "Suporte especializado",
         detail:
-          "Equipe certificada disponível para tirar dúvidas, enviar lembretes de manutenção e orientar sobre produtos específicos.",
+          "Orientacao clara para cuidados e manutencao da protese.",
       },
     ]
   } catch (error) {
@@ -73,11 +73,10 @@ export default function HairProsthesis() {
         <div className="max-w-4xl mx-auto text-center mb-14">
           <p className="uppercase tracking-widest text-blue-400 text-sm font-semibold mb-3">Prótese Capilar em Salvador</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Processo completo para conquistar cabelos naturais com segurança e privacidade
+            Processo claro, discreto e alinhado a identidade da URUS
           </h2>
           <p className="text-lg text-gray-300">
-            A URUS Barbearia oferece atendimento exclusivo para homens e mulheres que buscam prótese capilar em Salvador,
-            com sala reservada, análise criteriosa e manutenção programada que prolonga a durabilidade da prótese.
+            Atendimento reservado com avaliacao, aplicacao e manutencao no mesmo lugar.
           </p>
         </div>
 
@@ -85,7 +84,7 @@ export default function HairProsthesis() {
           <div className="space-y-6 bg-gray-900/60 border border-gray-800 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <ShieldCheck className="w-6 h-6 text-blue-300" aria-hidden />
-              <h3 className="text-2xl font-semibold">Etapas da aplicação</h3>
+              <h3 className="text-2xl font-semibold">Etapas</h3>
             </div>
             <ul className="space-y-5 text-left">
               {steps.map((step, index) => (
@@ -103,7 +102,7 @@ export default function HairProsthesis() {
           <div className="space-y-6 bg-gray-900/60 border border-gray-800 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-4">
               <Sparkles className="w-6 h-6 text-blue-300" aria-hidden />
-              <h3 className="text-2xl font-semibold">Por que escolher a URUS Barbearia?</h3>
+              <h3 className="text-2xl font-semibold">Diferenciais URUS</h3>
             </div>
             <ul className="space-y-5 text-left">
               {benefits.map((benefit) => (
@@ -118,8 +117,7 @@ export default function HairProsthesis() {
             </ul>
             <div className="bg-blue-900/20 border border-blue-800 rounded-xl p-6">
               <p className="text-gray-200 mb-4">
-                Estamos a 5 minutos do Terminal Marítimo do Bonfim, com estacionamento fácil e acesso rápido para toda
-                Salvador. Entre em contato e descubra como nossa prótese capilar pode transformar a sua rotina.
+                Fale com a equipe e receba orientacao direta sobre avaliacao, valores e manutencao.
               </p>
               <Link href="https://wa.me/557192109189" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4" aria-label="Solicitar orçamento de prótese capilar em Salvador">

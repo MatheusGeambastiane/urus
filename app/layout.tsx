@@ -7,67 +7,75 @@ import "./globals.css"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
+const siteUrl = "https://urusbarbearia.com.br"
+const siteName = "URUS Barbearia"
+const socialLinks = ["https://www.instagram.com/urus_barbearia"]
+const localNeighborhoods = ["Graca", "Barra", "Vitoria", "Campo Grande", "Ondina", "Rio Vermelho"]
 
 export const metadata: Metadata = {
-  // Title com foco local + principal serviço na frente
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Barbearia na Graça | Melhor Barbearia de Salvador | URUS",
+    default: "Melhor Barbearia na Graca em Salvador | URUS Barbearia",
     template: "%s | URUS Barbearia Salvador",
   },
   description:
-    "URUS Barbearia na Graça, Salvador-BA. A melhor barbearia de Salvador para cortes, barba e prótese capilar, atendendo também quem busca barbearia na Barra e barbearia em Salvador.",
-  // Keywords seguem pouco usadas pelo Google, mas úteis para outros motores
+    "URUS Barbearia na Graca, em Salvador: referencia para quem busca a melhor barbearia em Salvador, corte masculino, barba, protese capilar, atendimento para turistas e servicos com hora marcada.",
   keywords: [
-    "prótese capilar em Salvador",
-    "prótese capilar Salvador",
-    "barbearia em Salvador",
-    "melhor barbearia de Salvador",
-    "massoterapia em Salvador",
-    "massagem relaxante Salvador",
-    "kinesio taping Salvador",
-    "taping em Salvador",
+    "barbearia na Graca",
+    "melhor barbearia em Salvador",
+    "melhor barbearia na Graca",
     "barbearia Salvador",
-    "barbearia na Graça",
-    "barbearia na Barra",
     "barbearia em Salvador",
-    "melhor barbearia de Salvador",
+    "barbearia boa",
+    "barbearia para turistas",
+    "barbearia na Barra",
+    "corte masculino Salvador",
+    "barba Salvador",
+    "protese capilar Salvador",
+    "melhor lugar para protese capilar em Salvador",
+    "massoterapia Salvador",
     "Urus Barbearia",
   ],
-  authors: [{ name: "URUS Barbearia" }],
-  creator: "URUS Barbearia",
-  publisher: "URUS Barbearia",
-  // Canonical e variações de idioma ajudam a evitar conteúdo duplicado
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Barbearia",
   alternates: {
-    canonical: "https://urusbarbearia.com.br/",
+    canonical: `${siteUrl}/`,
     languages: {
-      "pt-BR": "https://urusbarbearia.com.br/",
+      "pt-BR": `${siteUrl}/`,
     },
   },
   formatDetection: { telephone: true, email: true, address: true },
+  other: {
+    "geo.region": "BR-BA",
+    "geo.placename": "Salvador",
+    "geo.position": "-12.9409478;-38.5005144",
+    ICBM: "-12.9409478, -38.5005144",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://urusbarbearia.com.br/",
-    title:
-      "URUS Barbearia – Barbearia na Graça e melhor barbearia de Salvador",
+    url: `${siteUrl}/`,
+    title: "URUS Barbearia | Melhor Barbearia na Graca em Salvador",
     description:
-      "Referência em cortes masculinos, barba e prótese capilar na Graça, Salvador-BA, com atendimento para quem busca barbearia na Barra e barbearia em Salvador.",
-    siteName: "URUS Barbearia",
+      "Barbearia na Graca com corte masculino, barba, protese capilar e atendimento com hora marcada para moradores, profissionais e turistas em Salvador.",
+    siteName,
     images: [
       {
-        url: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
+        url: `${siteUrl}/barbearia_fachada.jpg`,
         width: 1200,
         height: 630,
-        alt: "Fachada da URUS Barbearia na Graça, Salvador",
+        alt: "Fachada da URUS Barbearia na Graca, Salvador",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "URUS Barbearia – Barbearia na Graça e melhor barbearia de Salvador",
-    description: "Barbearia em Salvador com foco na Graça e atendimento para clientes da Barra. Agende seu horário.",
-    images: ["https://urusbarbearia.com.br/barbearia_fachada.jpg"],
+    title: "URUS Barbearia | Melhor Barbearia na Graca em Salvador",
+    description:
+      "Barbearia na Graca, em Salvador, com corte, barba, protese capilar e atendimento para turistas e clientes locais.",
+    images: [`${siteUrl}/barbearia_fachada.jpg`],
   },
   robots: {
     index: true,
@@ -83,7 +91,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/urus_logo.png",
     shortcut: "/urus_logo.png",
-    apple: "/apple-icon.png",
   },
   verification: {
     google: "Rixc5KbTrthQg64vBdD3pPL1oSpXa1y9muclKzNLQY8",
@@ -112,35 +119,68 @@ gtag('config', 'AW-17609739026');
             `.trim(),
           }}
         />
-        {/* WebSite + SearchAction (para sitelinks) */}
+        {/* WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "URUS Barbearia",
-              url: "https://urusbarbearia.com.br/",
-              potentialAction: {
-                "@type": "SearchAction",
-                target:
-                  "https://urusbarbearia.com.br/busca?q={search_term_string}",
-                "query-input": "required name=search_term_string",
+              "@id": `${siteUrl}/#website`,
+              name: siteName,
+              alternateName: "Urus Barbearia Salvador",
+              url: `${siteUrl}/`,
+              inLanguage: "pt-BR",
+              description:
+                "Barbearia na Graca, em Salvador, focada em corte masculino, barba, protese capilar, massoterapia e atendimento com hora marcada.",
+              publisher: {
+                "@type": "Organization",
+                name: siteName,
+                url: `${siteUrl}/`,
               },
             }),
           }}
         />
-        {/* LocalBusiness / HairSalon com Services destacados */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HairSalon",
-              name: "URUS Barbearia",
-              image: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
-              url: "https://urusbarbearia.com.br/",
+              "@id": `${siteUrl}/#barbershop`,
+              name: siteName,
+              alternateName: "Urus Barbearia Salvador",
+              slogan: "Barbearia na Graca em Salvador com atendimento premium e hora marcada",
+              description:
+                "Barbearia na Graca, em Salvador, para quem busca corte masculino, barba, protese capilar, bem-estar e atendimento reservado perto da Barra e Vitoria.",
+              image: [`${siteUrl}/barbearia_fachada.jpg`, `${siteUrl}/urus_barbearia_espera.jpg`],
+              url: `${siteUrl}/`,
+              hasMap: "https://www.google.com/maps/place/Urus+Barbearia+-+Salvador/",
               telephone: "+55-71-9210-9189",
+              priceRange: "$$",
+              sameAs: socialLinks,
+              areaServed: [{ "@type": "City", name: "Salvador" }, ...localNeighborhoods],
+              knowsAbout: [
+                "barbearia na Graca",
+                "melhor barbearia em Salvador",
+                "barbearia para turistas em Salvador",
+                "corte masculino",
+                "barba",
+                "protese capilar em Salvador",
+                "massoterapia",
+              ],
+              amenityFeature: [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Atendimento com hora marcada",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Facil acesso para turistas hospedados na Graca, Barra e Vitoria",
+                  value: true,
+                },
+              ],
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Rua Rio de São Pedro, 1",
@@ -154,34 +194,6 @@ gtag('config', 'AW-17609739026');
                 latitude: -12.9409478,
                 longitude: -38.5005144,
               },
-              areaServed: [
-                { "@type": "City", name: "Salvador" },
-                "Bairro da Graça",
-                "Graça",
-                "Bonfim",
-                "Ribeira",
-                "Roma",
-                "Calçada",
-                "Brotas",
-                "Barbalho",
-                "Suburbana de Salvador",
-                "Barra",
-                "Ondina",
-                "Graça",
-                "Vitória",
-                "Campo Grande",
-                "Pituba",
-                "Itaigara",
-                "Caminho das Árvores",
-                "Paralela",
-                "Stella Maris",
-                "Itapuã",
-                "Lauro de Freitas",
-                "Camaçari",
-                "Simões Filho",
-                "Feira de Santana",
-
-              ],
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -193,26 +205,35 @@ gtag('config', 'AW-17609739026');
                     "Friday",
                   ],
                   opens: "09:00",
-                  closes: "18:00",
+                  closes: "20:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: "Saturday",
                   opens: "09:00",
-                  closes: "16:00",
+                  closes: "18:00",
                 },
               ],
-              priceRange: "$$",
-              sameAs: ["https://www.instagram.com/urus_barbearia"],
               makesOffer: [
                 {
                   "@type": "Offer",
                   itemOffered: {
                     "@type": "Service",
-                    name: "Prótese Capilar em Salvador",
+                    name: "Corte masculino e barba em Salvador",
+                    serviceType: "Barbershop",
+                    areaServed: "Salvador",
+                    provider: { "@id": `${siteUrl}/#barbershop` },
+                  },
+                  availability: "https://schema.org/InStock",
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Protese capilar em Salvador",
                     serviceType: "Capillary Hair Prosthesis",
                     areaServed: "Salvador",
-                    provider: { "@type": "HairSalon", name: "URUS Barbearia" },
+                    provider: { "@id": `${siteUrl}/#barbershop` },
                   },
                   availability: "https://schema.org/InStock",
                 },
@@ -223,7 +244,7 @@ gtag('config', 'AW-17609739026');
                     name: "Massoterapia em Salvador",
                     serviceType: "Massage Therapy",
                     areaServed: "Salvador",
-                    provider: { "@type": "HairSalon", name: "URUS Barbearia" },
+                    provider: { "@id": `${siteUrl}/#barbershop` },
                   },
                   availability: "https://schema.org/InStock",
                 },
@@ -234,48 +255,9 @@ gtag('config', 'AW-17609739026');
                     name: "Kinesio Taping (Taping) em Salvador",
                     serviceType: "Kinesio Taping",
                     areaServed: "Salvador",
-                    provider: { "@type": "HairSalon", name: "URUS Barbearia" },
+                    provider: { "@id": `${siteUrl}/#barbershop` },
                   },
                   availability: "https://schema.org/InStock",
-                },
-              ],
-            }),
-          }}
-        />
-        {/* FAQPage específico às buscas-alvo (sem promessas médicas) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "Quanto tempo dura uma prótese capilar?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                      "A durabilidade varia conforme manutenção e rotina. Em média, recomenda-se manutenção periódica para melhor fixação, conforto e aspecto natural.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Como funciona a massoterapia na URUS Barbearia?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                      "Oferecemos massagens relaxantes e terapêuticas focadas em bem-estar. A sessão é personalizada conforme a necessidade do cliente.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "O que é kinesio taping (taping)?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                      "É a aplicação de bandagens elásticas para suporte muscular e conforto. A aplicação é feita por profissional capacitado e ajustada ao objetivo de cada cliente.",
-                  },
                 },
               ],
             }),

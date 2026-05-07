@@ -4,13 +4,16 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Promoção Especial | URUS Barbearia Salvador",
   description:
-    "Aproveite 15% de desconto na URUS Barbearia na Graça, Salvador. Promoção para quem busca a melhor barbearia de Salvador, barbearia na Barra e barbearia em Salvador.",
-  keywords:
-    "promoção barbearia salvador, desconto barbearia, barbearia na Graça, melhor barbearia de Salvador, barbearia na Barra, barbearia em Salvador",
+    "Aproveite a promocao especial da URUS Barbearia na Graca, em Salvador, com condicoes especiais para servicos selecionados.",
+  keywords: ["promocao barbearia salvador", "desconto barbearia graca", "urus barbearia promocao"],
+  robots: {
+    index: false,
+    follow: true,
+  },
   openGraph: {
     title: "Promoção Especial | URUS Barbearia Salvador",
     description:
-      "Ganhe 15% de desconto na barbearia na Graça. Promoção da melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
+      "Condicoes especiais para servicos selecionados na URUS Barbearia, na Graca, em Salvador.",
     images: [
       {
         url: "/barbearia_fachada.jpg",

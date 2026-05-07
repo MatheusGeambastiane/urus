@@ -1,4 +1,5 @@
 import { useMemo } from "react"
+import Script from "next/script"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 interface FAQItem {
@@ -57,6 +58,24 @@ export default function FAQ() {
           ))}
         </Accordion>
       </div>
+      <Script
+        id="prosthesis-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
     </section>
   )
 }

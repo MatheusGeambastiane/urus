@@ -2,21 +2,21 @@ import { Award, MapPin, ShieldCheck } from "lucide-react"
 
 const highlights = [
   {
-    title: "Melhor barbearia de Salvador",
+    title: "Barbearia na Graca com estrutura completa",
     description:
-      "Estrutura completa na Graça com sala para prótese capilar, barbearia premium e área de bem-estar.",
+      "A URUS une corte, barba, protese capilar e bem-estar em uma barbearia na Graça pensada para quem busca praticidade e atendimento de alto nivel em Salvador.",
     icon: ShieldCheck,
   },
   {
-    title: "Especialistas em prótese capilar",
+    title: "Barbearia em Salvador com equipe especializada",
     description:
-      "Equipe certificada que acompanha avaliação, aplicação e manutenção personalizada para o clima de Salvador.",
+      "Nossa equipe atende com tecnica, consistencia e cuidado personalizado, reforcando a URUS como referencia para quem procura barbearia em Salvador.",
     icon: Award,
   },
   {
-    title: "Localização estratégica",
+    title: "Barbearia perto da Barra e da Vitoria",
     description:
-      "Próxima ao Bonfim, Ribeira e bairros centrais, facilitando o acesso de toda a capital baiana.",
+      "A localizacao na Graca facilita o acesso de quem procura barbearia na Barra, na Vitoria, no Campo Grande e em outros bairros centrais de Salvador.",
     icon: MapPin,
   },
 ]
@@ -26,13 +26,13 @@ export default function SeoHighlights() {
     <section id="porque-urus" className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Prótese capilar em Salvador</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Barbearia na Graça em Salvador</p>
           <h2 className="text-3xl md:text-4xl font-bold">
-            Porque a URUS é referência entre as melhores barbearias de Salvador
+            Destaques da URUS para quem busca barbearia na Graça, barbearia na Barra e barbearia em Salvador
           </h2>
           <p className="text-lg text-gray-200">
-            Credibilidade construída com resultados naturais, processos documentados e proximidade com nossos clientes
-            na capital baiana.
+            Reforcamos localizacao, servicos e especialidades que ajudam a URUS a ser encontrada por quem procura uma
+            barbearia bem localizada e completa em Salvador.
           </p>
         </div>
 

@@ -1,9 +1,24 @@
 import Image from "next/image"
 
 const barbers = [
-  { name: "Gustavo", role: "Barbeiro Profissional", image: "/gustavo_barbeiro_urus_barbearia_salvador.jpg", imageClassName: "object-cover" },
-  { name: "Henrique", role: "Barbeiro Profissional", image: "/henrique_barbeiro_resizephoto.jpeg", imageClassName: "object-contain" },
-  { name: "Janice", role: "Massoterapeuta", image: "/janice_gonçalves_massoterapeuta_urus_barbearia_salvador.jpg", imageClassName: "object-cover" },
+  {
+    name: "Gustavo",
+    role: "Barbeiro profissional",
+    image: "/gustavo_barbeiro_urus_barbearia_salvador.jpg",
+    imageClassName: "object-cover",
+  },
+  {
+    name: "Henrique",
+    role: "Barbeiro profissional",
+    image: "/henrique_barbeiro_resizephoto.jpeg",
+    imageClassName: "object-contain",
+  },
+  {
+    name: "Janice",
+    role: "Massoterapeuta",
+    image: "/janice_gonçalves_massoterapeuta_urus_barbearia_salvador.jpg",
+    imageClassName: "object-cover",
+  },
 ]
 
 export default function Team() {
@@ -16,7 +31,12 @@ export default function Team() {
           {barbers.map((barber) => (
             <div key={barber.name} className="flex flex-col items-center gap-3">
               <div className="relative h-72 w-72 overflow-hidden rounded-full bg-gray-200">
-                <Image src={barber.image} alt={barber.name} fill className={barber.imageClassName} />
+                <Image
+                  src={barber.image}
+                  alt={barber.name}
+                  fill
+                  className={barber.imageClassName}
+                />
               </div>
               <div className="text-center">
                 <p className="text-lg font-semibold text-gray-900">{barber.name}</p>

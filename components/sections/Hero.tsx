@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse gap-10 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl md:order-1">
-            <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-3">Salvador • Bahia</p>
+            {/* <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-3">Salvador • Bahia</p> */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               A sua melhor barbearia em Salvador
             </h1>

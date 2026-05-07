@@ -128,7 +128,7 @@ const createMassageLandingContent = (): MassageLandingContent => {
             addressCountry: "BR",
           },
         },
-        areaServed: ["Salvador", "Bairro da Graça", "Graça", "Bonfim", "Ribeira"],
+        areaServed: ["Salvador", "Bairro da Graça", "Graça", "Barra", "Vitoria", "Campo Grande", "Ondina", "Pituba"],
         offers: [
           {
             "@type": "Offer",
@@ -170,19 +170,15 @@ const createMassageLandingContent = (): MassageLandingContent => {
 export const metadata: Metadata = {
   title: "Quick Massage e Taping em Salvador | Massoterapia a partir de R$ 25 | URUS",
   description:
-    "Quick massage e taping na URUS Barbearia na Graça, Salvador-BA. Atendimento na melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
+    "Quick massage e taping em Salvador com atendimento na Graca, ideal para alivio muscular, postura e bem-estar.",
   keywords: [
     "quick massage salvador",
     "massoterapia salvador",
     "taping salvador",
-    "kinesio taping graça",
+    "kinesio taping graca",
     "massagem express salvador",
     "massagem para dor nas costas salvador",
-    "massoterapia na graça",
-    "barbearia na Graça",
-    "melhor barbearia de Salvador",
-    "barbearia na Barra",
-    "barbearia em Salvador",
+    "massoterapia na graca",
   ],
   alternates: {
     canonical: "https://urusbarbearia.com.br/massoterapia-quick-massage-taping-salvador",
@@ -192,7 +188,7 @@ export const metadata: Metadata = {
     url: "https://urusbarbearia.com.br/massoterapia-quick-massage-taping-salvador",
     title: "Quick Massage e Taping em Salvador | URUS Barbearia",
     description:
-      "Quick massage e taping na URUS Barbearia na Graça. Atendimento da melhor barbearia de Salvador para quem busca barbearia na Barra e barbearia em Salvador.",
+      "Quick massage e taping com atendimento na Graca, em Salvador.",
     locale: "pt_BR",
     siteName: "URUS Barbearia",
     images: [
@@ -207,7 +203,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Quick Massage e Taping em Salvador | URUS Barbearia",
-    description: "Massoterapia na Graça, Salvador. Atendimento da melhor barbearia de Salvador e para quem busca barbearia na Barra.",
+    description: "Massoterapia na Graca, em Salvador, com quick massage e taping terapeutico.",
     images: ["/barbearia_fachada.jpg"],
   },
 }

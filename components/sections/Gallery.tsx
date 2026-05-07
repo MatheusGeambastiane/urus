@@ -67,7 +67,7 @@ export default function Gallery() {
           <div className="overflow-hidden rounded-lg shadow-lg">
             <div className="relative h-80">
               <Image
-                src="/foto_recepcao.jpeg"
+                src="/urus_barbearia_espera.jpg"
                 alt="Área de recepção da URUS Barbearia"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
