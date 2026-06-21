@@ -6,7 +6,6 @@ import About from "@/components/sections/About"
 import Services from "@/components/sections/Services"
 import Gallery from "@/components/sections/Gallery"
 import LocalSeoFaq from "@/components/sections/LocalSeoFaq"
-import SeoHighlights from "@/components/sections/SeoHighlights"
 import Team from "@/components/sections/Team"
 import Location from "@/components/sections/Location"
 import Footer from "@/components/sections/Footer"
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "URUS Barbearia",
     images: [
       {
-        url: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
+        url: "https://urusbarbearia.com.br/urus_barbearia_espera.jpg",
         width: 1200,
         height: 630,
         alt: "Entrada da URUS Barbearia na Graca, Salvador",
@@ -51,8 +50,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "URUS Barbearia | Melhor Barbearia na Graca em Salvador",
     description:
-      "Barbearia na Graca com corte, barba, protese capilar e atendimento com hora marcada em Salvador.",
-    images: ["https://urusbarbearia.com.br/barbearia_fachada.jpg"],
+      "Barbearia na Graca com corte, barba, protese capilar e atendimento com ou sem hora marcada em Salvador.",
+    images: ["https://urusbarbearia.com.br/urus_barbearia_espera.jpg"],
   },
 }
 
@@ -71,7 +70,7 @@ const homeStructuredData = {
       inLanguage: "pt-BR",
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://urusbarbearia.com.br/barbearia_fachada.jpg",
+        url: "https://urusbarbearia.com.br/urus_barbearia_espera.jpg",
       },
     },
     {
@@ -113,7 +112,7 @@ const homeStructuredData = {
 export default function BarberiaLandingPage() {
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <div className="min-h-screen overflow-hidden bg-[#030304] text-[#EBEBEB]">
         <Navigation />
         <Script id="home-structured-data" type="application/ld+json">
           {JSON.stringify(homeStructuredData)}
@@ -121,7 +120,6 @@ export default function BarberiaLandingPage() {
         <Hero />
         <About />
         <Services />
-        <SeoHighlights />
         <Team />
         <Gallery />
         <LocalSeoFaq />

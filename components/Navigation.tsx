@@ -1,57 +1,103 @@
+"use client"
+
+import { useState } from "react"
+import { Poppins } from "next/font/google"
 import Link from "next/link"
+import { Menu, Scissors, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: "600",
+})
+
+const navItems = [
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#servicos", label: "Servicos" },
+  { href: "/protese-capilar", label: "Protese capilar" },
+  { href: "/massoterapia-quick-massage-taping-salvador", label: "Massoterapia" },
+  { href: "/#localizacao", label: "Localizacao" },
+]
+
 export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold">URUS</span>
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#030304]/80 backdrop-blur-xl">
+      <div className="urus-container flex items-center justify-between py-3">
+        <Link href="/" className="flex items-center gap-3" aria-label="URUS Barbearia">
+          <span className={`${poppins.className} text-2xl font-semibold tracking-[0.34em] text-[#EBEBEB]`}>
+            URUS
+          </span>
         </Link>
-        <div className="hidden md:flex items-center space-x-6">
-          <Link href="/#home" className="text-white hover:text-gray-300 transition">
-            Home
-          </Link>
-          <Link href="/#sobre" className="text-white hover:text-gray-300 transition">
-            Sobre nós
-          </Link>
-          <Link href="/#servicos" className="text-white hover:text-gray-300 transition">
-            Serviços
-          </Link>
-          <Link href="/protese-capilar" className="text-white hover:text-gray-300 transition">
-            Prótese capilar
-          </Link>
-          <Link
-            href="/massoterapia-quick-massage-taping-salvador"
-            className="text-white hover:text-gray-300 transition"
+
+        <div className="hidden items-center gap-7 lg:flex">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm font-semibold text-[#EBEBEB]/80 transition hover:text-[#F2AD1D]"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Button
+            asChild
+            className="h-11 rounded-full border border-[#EBEBEB]/20 bg-[#EBEBEB] px-6 text-sm font-extrabold text-[#030304] shadow-[0_10px_28px_rgba(235,235,235,0.18)] transition hover:bg-white"
           >
-            Massoterapia & Taping
-          </Link>
-          <Link href="/#localizacao" className="text-white hover:text-gray-300 transition">
-            Localização
-          </Link>
-          <Link
-            href="https://agenda.urusbarbearia.com.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="bg-[#EBEBEB] text-[#030304] border-0 px-8 py-6 text-lg font-semibold rounded-[25px] shadow-[0_12px_30px_rgba(235,235,235,0.25)] hover:opacity-90 hover:scale-[1.02] transition">
-              Agende agora
-            </Button>
-          </Link>
+            <Link
+              href="https://agenda.urusbarbearia.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Scissors className="h-4 w-4" />
+              Agendar
+            </Link>
+          </Button>
         </div>
-        <Button variant="ghost" className="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-10 w-10 rounded-full border border-white/10 text-[#EBEBEB] hover:bg-white/10 lg:hidden"
+          onClick={() => setIsOpen((value) => !value)}
+          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
       </div>
+
+      {isOpen ? (
+        <div className="border-t border-white/10 bg-[#030304] lg:hidden">
+          <div className="urus-container grid gap-1 py-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-lg px-3 py-3 text-sm font-semibold text-[#EBEBEB]/85 hover:bg-white/10 hover:text-[#F2AD1D]"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Button
+              asChild
+              className="mt-3 h-12 rounded-full bg-[#EBEBEB] font-extrabold text-[#030304] hover:bg-white"
+            >
+              <Link
+                href="https://agenda.urusbarbearia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                <Scissors className="h-4 w-4" />
+                Agende agora
+              </Link>
+            </Button>
+          </div>
+        </div>
+      ) : null}
     </nav>
   )
 }

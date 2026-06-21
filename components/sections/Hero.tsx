@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 function gtag_report_conversion(url?: string) {
@@ -26,50 +27,60 @@ function gtag_report_conversion(url?: string) {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-[#030304]">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col-reverse gap-10 md:flex-row md:items-center md:justify-between">
-          <div className="max-w-2xl md:order-1">
-            {/* <p className="text-sm uppercase tracking-[0.3em] text-blue-200 mb-3">Salvador • Bahia</p> */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              A sua melhor barbearia em Salvador
-            </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-6">
-              Mais que um corte, uma experiência
-            </p>
-            <Link
-              href="https://agenda.urusbarbearia.com.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => gtag_report_conversion()}
+    <section id="home" className="relative h-screen bg-[#030304] pt-24">
+      <div className="absolute inset-0 opacity-70">
+        <div className="absolute left-0 top-0 h-[34rem] w-[34rem] rounded-full bg-[#F2AD1D]/10 blur-3xl" />
+        <div className="absolute bottom-8 right-0 h-[28rem] w-[28rem] rounded-full bg-white/5 blur-3xl" />
+      </div>
+
+      <div className="urus-container relative grid h-full items-center gap-10 py-8 lg:grid-cols-[0.92fr_1.08fr] lg:py-14">
+        <div className="max-w-2xl">
+          <h1 className="font-display text-[clamp(2.1rem,7.2vw,5.3rem)] font-bold leading-[0.9] tracking-normal">
+            Sua melhor barbearia em Salvador
+          </h1>
+          <p className="mt-8 max-w-xl text-lg leading-8 text-[#EBEBEB]/80 md:text-xl">
+            Mais que um corte, uma experiência
+          </p>
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Button
+              asChild
+              className="h-14 rounded-full bg-[#EBEBEB] px-7 text-base font-extrabold text-[#030304] shadow-[0_16px_45px_rgba(235,235,235,0.2)] hover:bg-white"
             >
-              <Button className="bg-[#EBEBEB] text-[#030304] border-0 px-8 py-6 text-lg font-semibold rounded-[25px] shadow-[0_12px_30px_rgba(235,235,235,0.25)] hover:opacity-90 hover:scale-[1.02] transition">
+              <Link
+                href="https://agenda.urusbarbearia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => gtag_report_conversion()}
+              >
                 Agende agora
-              </Button>
-            </Link>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="h-14 rounded-full border-[#EBEBEB]/25 bg-transparent px-7 text-base font-bold text-[#EBEBEB] hover:bg-[#EBEBEB] hover:text-[#030304]"
+            >
+              <Link href="https://wa.me/5571992109189" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </Link>
+            </Button>
           </div>
-          <div className="w-full md:w-1/2 md:order-2">
-            <div className="relative h-64 w-full sm:h-80 md:h-[630px]">
-              <Image
-                src="/maquina_urus.png"
-                alt="Máquina URUS"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
+
+        </div>
+
+        <div className="relative min-h-[360px] sm:min-h-[500px] lg:min-h-[680px]">
+          <div className="absolute inset-0 mx-auto h-full max-w-[560px]">
+            <Image
+              src="/maquina_urus.png"
+              alt="Máquina URUS"
+              fill
+              className="object-contain p-8 sm:p-12"
+              priority
+            />
           </div>
-          {/* <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {highlights.map((item) => (
-              <div key={item.title} className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-blue-400 flex-shrink-0" aria-hidden />
-                <div>
-                  <p className="font-semibold text-white">{item.title}</p>
-                  <p className="text-sm text-gray-200">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div> */}
         </div>
       </div>
     </section>

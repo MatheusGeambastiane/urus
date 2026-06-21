@@ -22,6 +22,11 @@
   --border: 217.2 32.6% 17.5%;
   --input: 217.2 32.6% 17.5%;
   --ring: 38 92% 50%;
+  --urus-black: #030304;
+  --urus-ink: #09090a;
+  --urus-paper: #ebebeb;
+  --urus-gold: #f2ad1d;
+  --urus-smoke: #171717;
 }
 
 .text-ddcece {
@@ -42,7 +47,25 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #0a0a0a, #121212);
+  background:
+    radial-gradient(circle at top left, rgba(242, 173, 29, 0.12), transparent 32rem),
+    linear-gradient(to bottom, #030304, #111111 52%, #030304);
+  color: var(--urus-paper);
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: rgba(242, 173, 29, 0.35);
+  color: var(--urus-paper);
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.urus-container {
+  width: min(1280px, calc(100% - 1.5rem));
+  margin-inline: auto;
 }
 
 @keyframes fadeIn {
@@ -57,4 +80,3 @@ body {
 .animate-fadeIn {
   animation: fadeIn 1.5s ease-in-out;
 }
-

@@ -4,43 +4,46 @@ const faqs = [
   {
     question: "Onde fica a URUS Barbearia na Graca?",
     answer:
-      "A URUS Barbearia fica na Rua Rio de Sao Pedro, 1, no bairro da Graca, em Salvador. O acesso e pratico para quem vem da Barra, Vitoria, Campo Grande e regiao central.",
+      "A URUS Barbearia fica na Rua Rio de Sao Pedro, 1, no bairro da Graca, em Salvador. Em frente à academia Bluefit",
   },
   {
     question: "Quais servicos encontro na URUS Barbearia em Salvador?",
     answer:
-      "A unidade oferece corte masculino, barba, combos, protese capilar e servicos de bem-estar. O foco e atender com horario marcado e estrutura reservada.",
+      "A unidade oferece corte, barba, combos, protese capilar, massoterapia, quick massage e taping, alem de servicos de bem-estar.",
   },
   {
-    question: "A URUS atende quem procura barbearia perto da Barra?",
+    question: "O atendimento só é por hora marcada?",
     answer:
-      "Sim. A localizacao na Graca facilita o atendimento de clientes que moram ou circulam pela Barra, Vitoria, Ondina e bairros proximos.",
+      "Não. O atendimento pode ser feito tanto por hora marcada quanto por ordem de chegada, conforme a disponibilidade da equipe.",
   },
   {
     question: "Como agendar horario na barbearia?",
     answer:
-      "O agendamento pode ser feito online ou pelo WhatsApp da URUS Barbearia, o que ajuda a reduzir espera e organizar melhor o atendimento.",
+      "O agendamento pode ser feito online ou pelo WhatsApp da URUS Barbearia no numero (71) 99210-9189.",
   },
 ]
 
 export default function LocalSeoFaq() {
   return (
-    <section id="faq-local" className="bg-white py-20 text-black">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-amber-700">Barbearia na Graca em Salvador</p>
-          <h2 className="text-3xl font-bold md:text-4xl">Perguntas frequentes sobre a URUS Barbearia</h2>
-          <p className="mt-4 text-lg leading-relaxed text-gray-700">
-            Este bloco ajuda quem pesquisa por barbearia na Graca, barbearia em Salvador ou uma barbearia perto da
-            Barra a entender rapidamente localizacao, servicos e agendamento.
+    <section id="faq-local" className="bg-[#030304] py-20 text-[#EBEBEB] md:py-28">
+      <div className="urus-container">
+        <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+          <div>
+            <h2 className="mt-4 font-display text-5xl font-bold leading-none md:text-7xl">
+              Antes de agendar.
+            </h2>
+          </div>
+          <p className="text-lg leading-8 text-[#EBEBEB]/70">
+            Este bloco ajuda quem pesquisa por barbearia na Graca ou barbearia em Salvador
+            a entender rapidamente localizacao, servicos e agendamento.
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-4">
+        <div className="mt-12 grid gap-3 md:grid-cols-2">
           {faqs.map((faq) => (
-            <article key={faq.question} className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900">{faq.question}</h3>
-              <p className="mt-3 leading-relaxed text-gray-700">{faq.answer}</p>
+            <article key={faq.question} className="rounded-lg border border-white/10 bg-white/[0.04] p-6">
+              <h3 className="text-xl font-extrabold text-white">{faq.question}</h3>
+              <p className="mt-4 leading-7 text-[#EBEBEB]/70">{faq.answer}</p>
             </article>
           ))}
         </div>

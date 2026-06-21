@@ -1,12 +1,20 @@
 import type { Metadata } from "next"
 import Script from "next/script"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Cormorant_Garamond, Manrope } from "next/font/google"
 import { Suspense } from "react"
 import GoogleAnalytics from "@/components/GoogleAnalytics"
 import "./globals.css"
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] })
+const display = Cormorant_Garamond({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+})
+const body = Manrope({
+  variable: "--font-body",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+})
 const siteUrl = "https://urusbarbearia.com.br"
 const siteName = "URUS Barbearia"
 const socialLinks = ["https://www.instagram.com/urus_barbearia"]
@@ -19,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | URUS Barbearia Salvador",
   },
   description:
-    "URUS Barbearia na Graca, em Salvador: referencia para quem busca a melhor barbearia em Salvador, corte masculino, barba, protese capilar, atendimento para turistas e servicos com hora marcada.",
+    "URUS Barbearia na Graca, em Salvador: referencia para quem busca a melhor barbearia em Salvador, corte masculino, barba, protese capilar, atendimento para turistas e servicos com ou sem hora marcada.",
   keywords: [
     "barbearia na Graca",
     "melhor barbearia em Salvador",
@@ -59,11 +67,11 @@ export const metadata: Metadata = {
     url: `${siteUrl}/`,
     title: "URUS Barbearia | Melhor Barbearia na Graca em Salvador",
     description:
-      "Barbearia na Graca com corte masculino, barba, protese capilar e atendimento com hora marcada para moradores, profissionais e turistas em Salvador.",
+      "Barbearia na Graca com corte masculino, barba, protese capilar e atendimento com ou sem hora marcada para moradores, profissionais e turistas em Salvador.",
     siteName,
     images: [
       {
-        url: `${siteUrl}/barbearia_fachada.jpg`,
+        url: `${siteUrl}/urus_barbearia_espera.jpg`,
         width: 1200,
         height: 630,
         alt: "Fachada da URUS Barbearia na Graca, Salvador",
@@ -75,7 +83,7 @@ export const metadata: Metadata = {
     title: "URUS Barbearia | Melhor Barbearia na Graca em Salvador",
     description:
       "Barbearia na Graca, em Salvador, com corte, barba, protese capilar e atendimento para turistas e clientes locais.",
-    images: [`${siteUrl}/barbearia_fachada.jpg`],
+    images: [`${siteUrl}/urus_barbearia_espera.jpg`],
   },
   robots: {
     index: true,
@@ -89,7 +97,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/urus_logo.png",
+    icon: [{ url: "/urus_logo.png", type: "image/png" }],
     shortcut: "/urus_logo.png",
   },
   verification: {
@@ -132,7 +140,7 @@ gtag('config', 'AW-17609739026');
               url: `${siteUrl}/`,
               inLanguage: "pt-BR",
               description:
-                "Barbearia na Graca, em Salvador, focada em corte masculino, barba, protese capilar, massoterapia e atendimento com hora marcada.",
+                "Barbearia na Graca, em Salvador, focada em corte masculino, barba, protese capilar, massoterapia e atendimento com ou sem hora marcada.",
               publisher: {
                 "@type": "Organization",
                 name: siteName,
@@ -150,13 +158,13 @@ gtag('config', 'AW-17609739026');
               "@id": `${siteUrl}/#barbershop`,
               name: siteName,
               alternateName: "Urus Barbearia Salvador",
-              slogan: "Barbearia na Graca em Salvador com atendimento premium e hora marcada",
+              slogan: "Barbearia na Graca em Salvador com atendimento premium e flexivel",
               description:
-                "Barbearia na Graca, em Salvador, para quem busca corte masculino, barba, protese capilar, bem-estar e atendimento reservado perto da Barra e Vitoria.",
-              image: [`${siteUrl}/barbearia_fachada.jpg`, `${siteUrl}/urus_barbearia_espera.jpg`],
+                "Barbearia na Graca, em Salvador, para quem busca corte masculino, barba, protese capilar, massoterapia, bem-estar e atendimento com ou sem hora marcada.",
+              image: [`${siteUrl}/urus_barbearia_espera.jpg`],
               url: `${siteUrl}/`,
               hasMap: "https://www.google.com/maps/place/Urus+Barbearia+-+Salvador/",
-              telephone: "+55-71-9210-9189",
+              telephone: "+55-71-99210-9189",
               priceRange: "$$",
               sameAs: socialLinks,
               areaServed: [{ "@type": "City", name: "Salvador" }, ...localNeighborhoods],
@@ -172,12 +180,12 @@ gtag('config', 'AW-17609739026');
               amenityFeature: [
                 {
                   "@type": "LocationFeatureSpecification",
-                  name: "Atendimento com hora marcada",
+                  name: "Atendimento com ou sem hora marcada",
                   value: true,
                 },
                 {
                   "@type": "LocationFeatureSpecification",
-                  name: "Facil acesso para turistas hospedados na Graca, Barra e Vitoria",
+                  name: "Atendimento por agendamento ou ordem de chegada",
                   value: true,
                 },
               ],
@@ -264,7 +272,7 @@ gtag('config', 'AW-17609739026');
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${display.variable} ${body.variable} antialiased`}>
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>

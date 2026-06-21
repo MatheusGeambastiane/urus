@@ -193,7 +193,7 @@ export const metadata: Metadata = {
     siteName: "URUS Barbearia",
     images: [
       {
-        url: "/barbearia_fachada.jpg",
+        url: "/urus_barbearia_espera.jpg",
         width: 1200,
         height: 630,
         alt: "Espaço de massoterapia e taping da URUS Barbearia em Salvador",
@@ -204,7 +204,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quick Massage e Taping em Salvador | URUS Barbearia",
     description: "Massoterapia na Graca, em Salvador, com quick massage e taping terapeutico.",
-    images: ["/barbearia_fachada.jpg"],
+    images: ["/urus_barbearia_espera.jpg"],
   },
 }
 

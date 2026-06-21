@@ -79,7 +79,7 @@ export default function PromoPage() {
 
           <div className="relative w-full max-w-2xl h-80 md:h-96 mb-12 rounded-lg overflow-hidden shadow-2xl">
             <div className="absolute inset-0 bg-black/30 z-10 rounded-lg"></div>
-            <Image src="/barbearia_fachada.jpg" alt="Barbearia URUS" fill className="object-cover object-center" />
+            <Image src="/urus_barbearia_espera.jpg" alt="Barbearia URUS" fill className="object-cover object-center" />
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-amber-400">
@@ -128,4 +128,3 @@ export default function PromoPage() {
     </div>
   )
 }
-

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Condicoes especiais para servicos selecionados na URUS Barbearia, na Graca, em Salvador.",
     images: [
       {
-        url: "/barbearia_fachada.jpg",
+        url: "/urus_barbearia_espera.jpg",
         width: 1200,
         height: 630,
         alt: "Promoção URUS Barbearia Salvador",
