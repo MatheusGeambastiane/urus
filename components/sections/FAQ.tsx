@@ -18,7 +18,7 @@ const loadFaq = (): FAQItem[] => {
       {
         question: "Com que frequência preciso fazer manutenção?",
         answer:
-          "Recomendamos retornos a cada 20 ou 30 dias para manutenção da prótese capilar, garantindo fixação segura, conforto e aparência natural. Nossos barbeiros cuidam de toda a higienização e ajuste adesivo.",
+          "Recomendamos retornos a cada 15 dias para manutenção da prótese capilar, garantindo fixação segura, conforto e aparência natural. Nossos barbeiros cuidam de toda a higienização e ajuste adesivo.",
       },
       {
         question: "A prótese capilar permite praticar esportes e ir à praia?",

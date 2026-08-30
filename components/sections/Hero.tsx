@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BOOKING_URL } from "@/lib/urls"
 
 function gtag_report_conversion(url?: string) {
   const callback = () => {
@@ -48,7 +49,7 @@ export default function Hero() {
               className="h-14 rounded-full bg-[#EBEBEB] px-7 text-base font-extrabold text-[#030304] shadow-[0_16px_45px_rgba(235,235,235,0.2)] hover:bg-white"
             >
               <Link
-                href="https://agenda.urusbarbearia.com.br/"
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => gtag_report_conversion()}

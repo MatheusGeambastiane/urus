@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google"
 import Link from "next/link"
 import { Menu, Scissors, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BOOKING_URL } from "@/lib/urls"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function Navigation() {
             className="h-11 rounded-full border border-[#EBEBEB]/20 bg-[#EBEBEB] px-6 text-sm font-extrabold text-[#030304] shadow-[0_10px_28px_rgba(235,235,235,0.18)] transition hover:bg-white"
           >
             <Link
-              href="https://agenda.urusbarbearia.com.br/"
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,7 +87,7 @@ export default function Navigation() {
               className="mt-3 h-12 rounded-full bg-[#EBEBEB] font-extrabold text-[#030304] hover:bg-white"
             >
               <Link
-                href="https://agenda.urusbarbearia.com.br/"
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

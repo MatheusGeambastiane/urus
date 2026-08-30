@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Instagram, Scissors } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BOOKING_URL } from "@/lib/urls"
 
 export default function Footer() {
   return (
@@ -21,7 +22,7 @@ export default function Footer() {
             </p>
           </div>
           <Button asChild className="h-12 rounded-full bg-[#EBEBEB] px-7 font-extrabold text-[#030304] hover:bg-white">
-            <Link href="https://agenda.urusbarbearia.com.br/" target="_blank" rel="noopener noreferrer">
+            <Link href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               <Scissors className="h-4 w-4" />
               Agende agora
             </Link>

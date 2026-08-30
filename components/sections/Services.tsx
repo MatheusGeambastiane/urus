@@ -3,6 +3,7 @@ import { useMemo } from "react"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowUpRight, BadgeCheck, Clock, Sparkles } from "lucide-react"
+import { BOOKING_URL } from "@/lib/urls"
 
 type ServiceItem = {
   title: string
@@ -16,7 +17,6 @@ const formatCurrency = (value: number) =>
   }).format(value)
 
 export default function Services() {
-  const bookingHref = "https://agenda.urusbarbearia.com.br/"
   const serviceCategories = useMemo(
     () => ({
       cabelo: [
@@ -114,7 +114,7 @@ export default function Services() {
                   {serviceCategories[category].map((service: ServiceItem) => (
                     <Link
                       key={service.title}
-                      href={bookingHref}
+                      href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-between gap-5 rounded-lg border border-white/10 bg-[#101010] p-5 transition hover:border-[#F2AD1D]/60 hover:bg-[#151515]"

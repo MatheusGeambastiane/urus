@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { CalendarDays, Clock, MapPin, Navigation } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BOOKING_URL } from "@/lib/urls"
 
 export default function Location() {
   return (
@@ -55,7 +56,7 @@ export default function Location() {
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               <Button asChild className="h-12 rounded-full bg-[#EBEBEB] font-extrabold text-[#030304] hover:bg-white">
-                <Link href="https://agenda.urusbarbearia.com.br/" target="_blank" rel="noopener noreferrer">
+                <Link href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   <CalendarDays className="h-4 w-4" />
                   Agendar
                 </Link>
