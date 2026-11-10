@@ -12,7 +12,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "ci:install": "if [ -f package-lock.json ]; then npm ci; else npm i --no-audit --no-fund; fi"
+    "ci:install": "if [ -f package-lock.json ]; then npm ci; else npm i --no-audit --no-fund; fi",
+    "test:i18n": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.7",
@@ -24,6 +25,7 @@
     "date-fns": "^4.1.0",
     "lucide-react": "^0.479.0",
     "next": "15.1.11",
+    "next-intl": "^4.14.10",
     "nodemailer": "^7.0.5",
     "ogl": "^1.0.11",
     "react": "^19.0.0",

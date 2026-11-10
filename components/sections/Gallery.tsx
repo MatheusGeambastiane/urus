@@ -1,9 +1,13 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 
 export default function Gallery() {
+  const t = useTranslations("site")
+
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
 
@@ -30,10 +34,14 @@ export default function Gallery() {
   }, [])
 
   return (
-    <section id="espaco" className="bg-[#EBEBEB] py-20 text-[#030304] md:py-28" ref={sectionRef}>
+    <section
+      id="espaco"
+      className="bg-[#EBEBEB] py-20 text-[#030304] md:py-28"
+      ref={sectionRef}
+    >
       <div className="urus-container">
         <h2 className="font-display text-5xl font-bold leading-none md:text-7xl">
-          Minimalista, climatizado e direto ao ponto.
+          {t("Minimalista_climatizado_e_direto_ao_ponto_235")}
         </h2>
 
         <div
@@ -43,15 +51,14 @@ export default function Gallery() {
         >
           <div className="space-y-6">
             <p className="text-xl leading-9 text-[#030304]/75">
-              Um espaço pensado para quem procura uma barbearia em Salvador com conforto, clima
-              reservado e uma experiência sem excesso.
+              {t("Um_espaco_pensado_para_quem_procura_uma_barbearia_em_236")}
             </p>
           </div>
 
           <div className="relative h-[420px] overflow-hidden rounded-[18px] border border-[#030304]/10 bg-white/60 shadow-[0_24px_80px_rgba(3,3,4,0.16)] md:h-[560px]">
             <Image
               src="/urus_barbearia_espera.jpg"
-              alt="Recepção da URUS Barbearia"
+              alt={t("Recepcao_da_URUS_Barbearia_237")}
               fill
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"

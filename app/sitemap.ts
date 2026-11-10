@@ -1,28 +1,26 @@
 import type { MetadataRoute } from "next"
+import { routing } from "@/i18n/routing"
+import { languageAlternates, localizedUrl } from "@/i18n/metadata"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://urusbarbearia.com.br"
-  const lastModified = new Date()
-
-  return [
+  const pages = [
+    { path: "/", priority: 1, changeFrequency: "weekly" as const },
     {
-      url: `${baseUrl}/`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/protese-capilar`,
-      lastModified,
-      changeFrequency: "weekly",
+      path: "/protese-capilar",
       priority: 0.9,
+      changeFrequency: "weekly" as const,
     },
     {
-      url: `${baseUrl}/massoterapia-quick-massage-taping-salvador`,
-      lastModified,
-      changeFrequency: "monthly",
+      path: "/massoterapia-quick-massage-taping-salvador",
       priority: 0.8,
+      changeFrequency: "monthly" as const,
     },
-
   ]
+  return pages.flatMap(({ path, ...page }) =>
+    routing.locales.map((locale) => ({
+      ...page,
+      url: localizedUrl(locale, path),
+      alternates: { languages: languageAlternates(path) },
+    })),
+  )
 }

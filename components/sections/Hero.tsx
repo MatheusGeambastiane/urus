@@ -1,7 +1,9 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { BOOKING_URL } from "@/lib/urls"
@@ -27,6 +29,8 @@ function gtag_report_conversion(url?: string) {
 }
 
 export default function Hero() {
+  const t = useTranslations("site")
+
   return (
     <section id="home" className="relative h-screen bg-[#030304] pt-24">
       <div className="absolute inset-0 opacity-70">
@@ -37,10 +41,10 @@ export default function Hero() {
       <div className="urus-container relative grid h-full items-center gap-10 py-8 lg:grid-cols-[0.92fr_1.08fr] lg:py-14">
         <div className="max-w-2xl">
           <h1 className="font-display text-[clamp(2.1rem,7.2vw,5.3rem)] font-bold leading-[0.9] tracking-normal">
-            Sua melhor barbearia em Salvador
+            {t("Sua_melhor_barbearia_em_Salvador_195")}
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 text-[#EBEBEB]/80 md:text-xl">
-            Mais que um corte, uma experiência
+            {t("Mais_que_um_corte_uma_experiencia_196")}
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -54,7 +58,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 onClick={() => gtag_report_conversion()}
               >
-                Agende agora
+                {t("Agende_agora_193")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -63,20 +67,23 @@ export default function Hero() {
               variant="outline"
               className="h-14 rounded-full border-[#EBEBEB]/25 bg-transparent px-7 text-base font-bold text-[#EBEBEB] hover:bg-[#EBEBEB] hover:text-[#030304]"
             >
-              <Link href="https://wa.me/5571992109189" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://wa.me/5571992109189"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </Link>
             </Button>
           </div>
-
         </div>
 
         <div className="relative min-h-[360px] sm:min-h-[500px] lg:min-h-[680px]">
           <div className="absolute inset-0 mx-auto h-full max-w-[560px]">
             <Image
               src="/maquina_urus.png"
-              alt="Máquina URUS"
+              alt={t("Maquina_URUS_198")}
               fill
               className="object-contain p-8 sm:p-12"
               priority

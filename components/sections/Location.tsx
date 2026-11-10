@@ -1,11 +1,17 @@
-import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { Link } from "@/i18n/navigation"
 import { CalendarDays, Clock, MapPin, Navigation } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { BOOKING_URL } from "@/lib/urls"
 
 export default function Location() {
+  const t = useTranslations("site")
+
   return (
-    <section id="localizacao" className="bg-[#EBEBEB] py-20 text-[#030304] md:py-28">
+    <section
+      id="localizacao"
+      className="bg-[#EBEBEB] py-20 text-[#030304] md:py-28"
+    >
       <div className="urus-container">
         <div className="mb-12 grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
@@ -14,7 +20,7 @@ export default function Location() {
             </h2>
           </div>
           <p className="text-lg leading-8 text-[#030304]/70">
-            Fácil acesso para quem vem da Barra, Vitória, Campo Grande, Ondina e região central.
+            {t("Facil_acesso_para_quem_vem_da_Barra_Vitoria_Campo_243")}
           </p>
         </div>
 
@@ -27,7 +33,7 @@ export default function Location() {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              title="Localização da Barbearia"
+              title={t("Localizacao_da_Barbearia_244")}
             ></iframe>
           </div>
 
@@ -35,11 +41,15 @@ export default function Location() {
             <div className="flex items-start gap-4 border-b border-white/10 pb-6">
               <MapPin className="mt-1 h-6 w-6 flex-shrink-0 text-[#F2AD1D]" />
               <div>
-                <h3 className="text-xl font-extrabold">Endereço</h3>
-                <p className="mt-3 text-[#EBEBEB]/75">Rua Rio de São Pedro, 1</p>
+                <h3 className="text-xl font-extrabold">{t("Endereco_245")}</h3>
+                <p className="mt-3 text-[#EBEBEB]/75">
+                  Rua Rio de São Pedro, 1
+                </p>
                 <p className="text-[#EBEBEB]/75">Graça - Salvador/BA</p>
                 <p className="mt-3 text-sm leading-6 text-[#EBEBEB]/55">
-                  Fácil acesso e ambiente preparado para receber você com conforto.
+                  {t(
+                    "Facil_acesso_e_ambiente_preparado_para_receber_voce_com_247",
+                  )}
                 </p>
               </div>
             </div>
@@ -47,18 +57,29 @@ export default function Location() {
             <div className="flex items-start gap-4 border-b border-white/10 py-6">
               <Clock className="mt-1 h-6 w-6 flex-shrink-0 text-[#F2AD1D]" />
               <div>
-                <h3 className="text-xl font-extrabold">Horário de funcionamento</h3>
-                <p className="mt-3 text-[#EBEBEB]/75">Segunda a Sexta: 9h às 20h</p>
-                <p className="text-[#EBEBEB]/75">Sábado: 9h às 18h</p>
-                <p className="text-[#EBEBEB]/75">Domingo: Fechado</p>
+                <h3 className="text-xl font-extrabold">
+                  {t("Horario_de_funcionamento_248")}
+                </h3>
+                <p className="mt-3 text-[#EBEBEB]/75">
+                  {t("Segunda_a_Sexta_9h_as_20h_249")}
+                </p>
+                <p className="text-[#EBEBEB]/75">{t("Sabado_9h_as_18h_250")}</p>
+                <p className="text-[#EBEBEB]/75">{t("Domingo_Fechado_251")}</p>
               </div>
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <Button asChild className="h-12 rounded-full bg-[#EBEBEB] font-extrabold text-[#030304] hover:bg-white">
-                <Link href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <Button
+                asChild
+                className="h-12 rounded-full bg-[#EBEBEB] font-extrabold text-[#030304] hover:bg-white"
+              >
+                <Link
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <CalendarDays className="h-4 w-4" />
-                  Agendar
+                  {t("Agendar_190")}
                 </Link>
               </Button>
               <Button
@@ -72,7 +93,7 @@ export default function Location() {
                   rel="noopener noreferrer"
                 >
                   <Navigation className="h-4 w-4" />
-                  Como chegar
+                  {t("Como_chegar_252")}
                 </Link>
               </Button>
             </div>
