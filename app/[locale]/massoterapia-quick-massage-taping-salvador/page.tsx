@@ -33,6 +33,9 @@ type MassageLandingContent = {
   jsonLd: string
 }
 
+const QUICK_MASSAGE_PRICE = 40
+const TAPING_PRICE = 60
+
 const fallbackContent = (t: Translator) => ({
   hero: {
     title: t("Quick_Massage_e_Kinesio_Taping_em_Salvador_115"),
@@ -46,11 +49,11 @@ const fallbackContent = (t: Translator) => ({
     ctaHref: `https://wa.me/5571992109189?text=${encodeURIComponent(t("whatsappMassage"))}`,
   },
   quickMassage: {
-    priceHighlight: t("Quick_massage_a_partir_de_R_25_119"),
+    priceHighlight: t("quickMassagePrice", { price: QUICK_MASSAGE_PRICE }),
     benefits: [
       {
         title: t("Alivio_imediato_para_quem_vive_na_correria_120"),
-        description: t("Sessoes_de_15_a_20_minutos_para_relaxar_ombros_121"),
+        description: t("quickMassageDurationBenefit"),
       },
       {
         title: t("Beneficios_comprovados_122"),
@@ -67,7 +70,7 @@ const fallbackContent = (t: Translator) => ({
     ],
   },
   taping: {
-    priceHighlight: t("Taping_terapeutico_a_partir_de_R_40_126"),
+    priceHighlight: t("tapingPrice", { price: TAPING_PRICE }),
     description: t(
       "Aplicamos_kinesio_taping_personalizado_para_atletas_profissionais_de_escritorio_127",
     ),
@@ -95,7 +98,7 @@ const fallbackContent = (t: Translator) => ({
   faqs: [
     {
       question: t("Quanto_tempo_dura_uma_sessao_de_quick_massage_134"),
-      answer: t("As_sessoes_variam_entre_15_e_25_minutos_conforme_135"),
+      answer: t("quickMassageDurationAnswer"),
     },
     {
       question: t("O_taping_doi_ou_limita_os_movimentos_136"),
@@ -157,20 +160,18 @@ const createMassageLandingContent =
             {
               "@type": "Offer",
               name: t("Quick_Massage_145"),
-              price: "25",
+              price: String(QUICK_MASSAGE_PRICE),
               priceCurrency: "BRL",
               url: `${baseUrl}#quick-massage`,
-              description: t("Sessoes_de_quick_massage_a_partir_de_R_25_146"),
+              description: t("quickMassageOffer", { price: QUICK_MASSAGE_PRICE }),
             },
             {
               "@type": "Offer",
               name: "Kinesio Taping",
-              price: "40",
+              price: String(TAPING_PRICE),
               priceCurrency: "BRL",
               url: `${baseUrl}#taping`,
-              description: t(
-                "Aplicacao_de_kinesio_taping_a_partir_de_R_40_147",
-              ),
+              description: t("tapingOffer", { price: TAPING_PRICE }),
             },
           ],
           serviceType: [
@@ -205,7 +206,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
   return localizeMetadata(
     {
-      title: t("Quick_Massage_e_Taping_em_Salvador_Massoterapia_a_partir_152"),
+      title: t("massageMetadataTitle"),
       description: t(
         "Quick_massage_e_taping_em_Salvador_com_atendimento_na_153",
       ),
@@ -454,7 +455,7 @@ export default function QuickMassageTapingPage() {
               {t("Estamos_na_Graca_Salvador_182")}
             </h2>
             <p className="mt-3 text-gray-200">
-              {t("Facil_acesso_pela_Avenida_Fernandes_da_Cunha_proximo_a_183")}
+              {t("massageLocation")}
             </p>
             <div className="mt-8">
               <Location />
