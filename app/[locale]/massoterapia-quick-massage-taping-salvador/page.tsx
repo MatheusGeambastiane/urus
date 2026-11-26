@@ -4,7 +4,9 @@ import type { Translator } from "@/i18n/types"
 import { getTranslations, getLocale } from "next-intl/server"
 import { localizeMetadata } from "@/i18n/metadata"
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Link } from "@/i18n/navigation"
+import { ArrowRight, Check, Clock3, MapPin, MessageCircle } from "lucide-react"
 
 import Navigation from "@/components/Navigation"
 import Footer from "@/components/sections/Footer"
@@ -157,7 +159,7 @@ const createMassageLandingContent =
             {
               "@type": "Offer",
               name: t("Quick_Massage_145"),
-              price: "25",
+              price: "40",
               priceCurrency: "BRL",
               url: `${baseUrl}#quick-massage`,
               description: t("Sessoes_de_quick_massage_a_partir_de_R_25_146"),
@@ -165,7 +167,7 @@ const createMassageLandingContent =
             {
               "@type": "Offer",
               name: "Kinesio Taping",
-              price: "40",
+              price: "60",
               priceCurrency: "BRL",
               url: `${baseUrl}#taping`,
               description: t(
@@ -261,206 +263,174 @@ export default function QuickMassageTapingPage() {
   const content = createMassageLandingContent(t)()
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white">
+    <div className="min-h-screen bg-[#030304] text-[#EBEBEB]">
       <Navigation />
-      <main className="pt-32 pb-20">
-        <section className="container mx-auto px-4 text-center max-w-4xl">
-          <span className="inline-block rounded-full border border-blue-400/60 bg-blue-500/10 px-4 py-1 text-sm font-semibold tracking-wide text-blue-200">
-            {content.quickMassage.priceHighlight} •{" "}
-            {content.taping.priceHighlight}
-          </span>
-          <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-5xl">
-            {content.hero.title}
-          </h1>
-          <p className="mt-4 text-lg text-gray-200 md:text-xl">
-            {content.hero.subtitle}
-          </p>
-          <p className="mt-6 text-gray-300">{content.hero.description}</p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link
-              href={content.hero.ctaHref}
-              className="rounded-md bg-gradient-to-r from-blue-500 to-blue-700 px-8 py-3 text-base font-semibold text-white transition hover:from-blue-600 hover:to-blue-800"
-            >
-              {content.hero.ctaLabel}
-            </Link>
-            <Link
-              href="#beneficios"
-              className="rounded-md border border-white/40 px-8 py-3 text-base font-semibold text-white transition hover:border-white hover:text-amber-300"
-            >
-              {t("Conhecer_os_beneficios_165")}
-            </Link>
-          </div>
-        </section>
-
-        <section
-          id="beneficios"
-          className="container mx-auto mt-20 grid gap-10 px-4 md:grid-cols-2"
-        >
-          <article className="rounded-2xl border border-white/10 bg-white/5 p-8 shadow-xl backdrop-blur">
-            <h2 className="text-2xl font-semibold text-amber-300 md:text-3xl">
-              {t("Por_que_apostar_na_quick_massage_166")}
-            </h2>
-            <p className="mt-4 text-gray-200">
-              {t(
-                "Pensada_para_quem_trabalha_em_escritorio_atende_clientes_ou_167",
-              )}
-            </p>
-            <ul className="mt-6 space-y-4 text-left text-gray-100">
-              {content.quickMassage.benefits.map((benefit) => (
-                <li
-                  key={benefit.title}
-                  className="rounded-xl border border-white/10 bg-black/30 p-4"
-                >
-                  <h3 className="text-lg font-semibold text-white">
-                    {benefit.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-300">
-                    {benefit.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="rounded-2xl border border-blue-400/30 bg-blue-500/10 p-8 shadow-xl backdrop-blur">
-            <h2 className="text-2xl font-semibold text-blue-200 md:text-3xl">
-              {t("Taping_terapeutico_para_suporte_e_performance_168")}
-            </h2>
-            <p className="mt-4 text-gray-200">{content.taping.description}</p>
-            <ul className="mt-6 space-y-4 text-left text-blue-100">
-              {content.taping.benefits.map((benefit) => (
-                <li
-                  key={benefit.title}
-                  className="rounded-xl border border-blue-400/30 bg-black/30 p-4"
-                >
-                  <h3 className="text-lg font-semibold text-white">
-                    {benefit.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-blue-100/80">
-                    {benefit.description}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </article>
-        </section>
-
-        <section className="container mx-auto mt-20 px-4 text-gray-200">
-          <h2 className="text-center text-3xl font-semibold text-white md:text-4xl">
-            {t("Massoterapia_completa_na_Graca_Salvador_BA_169")}
-          </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {content.seoParagraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="rounded-2xl border border-white/10 bg-black/40 p-6 text-sm leading-relaxed md:text-base"
-              >
-                {paragraph}
+      <main>
+        <section className="relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-40">
+          <div className="absolute left-0 top-24 h-80 w-80 rounded-full bg-[#F2AD1D]/10 blur-3xl" />
+          <div className="urus-container relative grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="max-w-3xl">
+              <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#F2AD1D]">
+                {t("Massoterapia_completa_na_Graca_Salvador_BA_169")}
               </p>
-            ))}
-          </div>
-        </section>
+              <h1 className="mt-5 font-display text-[clamp(3rem,7vw,6.5rem)] font-bold leading-[0.88]">
+                {content.hero.title}
+              </h1>
+              <p className="mt-7 max-w-xl text-lg leading-8 text-[#EBEBEB]/70">
+                {content.hero.description}
+              </p>
 
-        <section id="taping" className="container mx-auto mt-20 px-4">
-          <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-10 text-white shadow-2xl">
-            <h2 className="text-3xl font-semibold text-amber-300 md:text-4xl">
-              {t("Como_funciona_o_nosso_protocolo_de_taping_170")}
-            </h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  {t("Avaliacao_minuciosa_171")}
-                </h3>
-                <p className="mt-2 text-gray-200">
-                  {t(
-                    "Identificamos_padroes_posturais_dores_recorrentes_e_historico_esportivo_para_172",
-                  )}
-                </p>
+              <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+                {[content.quickMassage.priceHighlight, content.taping.priceHighlight].map(
+                  (price) => (
+                    <div
+                      key={price}
+                      className="rounded-lg border border-white/10 bg-white/[0.04] px-5 py-4 font-extrabold text-white"
+                    >
+                      {price}
+                    </div>
+                  ),
+                )}
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  {t("Aplicacao_personalizada_71")}
-                </h3>
-                <p className="mt-2 text-gray-200">
-                  {t(
-                    "Utilizamos_bandagens_originais_hipoalergenicas_e_resistentes_ao_suor_Cada_173",
-                  )}
-                </p>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Link
+                  href={content.hero.ctaHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-[#EBEBEB] px-7 font-extrabold text-[#030304] transition hover:bg-white"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  {content.hero.ctaLabel}
+                </Link>
+                <Link
+                  href="#localizacao"
+                  className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-white/20 px-7 font-bold transition hover:border-[#F2AD1D] hover:text-[#F2AD1D]"
+                >
+                  <MapPin className="h-4 w-4" />
+                  Rua Rio de São Pedro, 1
+                </Link>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  {t("Acompanhamento_e_orientacoes_174")}
-                </h3>
-                <p className="mt-2 text-gray-200">
-                  {t(
-                    "Recomendamos_exercicios_complementares_alongamentos_e_novos_agendamentos_para_manutencao_175",
-                  )}
+            </div>
+
+            <div className="relative min-h-[460px] overflow-hidden rounded-lg border border-white/10 bg-[#171717] md:min-h-[620px]">
+              <Image
+                src="/janice_gonçalves_massoterapeuta_urus_barbearia_salvador.jpg"
+                alt={t("Massoterapeuta_239")}
+                fill
+                priority
+                className="object-cover grayscale"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/60 to-transparent p-7 pt-28">
+                <p className="font-display text-3xl font-bold text-white">
+                  Janice Gonçalves
                 </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white">
-                  {t("Resultados_rapidos_176")}
-                </h3>
-                <p className="mt-2 text-gray-200">
-                  {t(
-                    "Muitos_clientes_relatam_alivio_imediato_nas_primeiras_24_horas_177",
-                  )}
+                <p className="mt-1 text-sm font-bold uppercase tracking-[0.16em] text-[#F2AD1D]">
+                  {t("Massoterapeuta_239")}
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="container mx-auto mt-20 px-4">
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-10 text-white shadow-xl">
-            <h2 className="text-3xl font-semibold text-white md:text-4xl">
-              {t("Perguntas_frequentes_178")}
-            </h2>
-            <div className="mt-8 space-y-6">
-              {content.faqs.map((faq) => (
-                <div
-                  key={faq.question}
-                  className="rounded-2xl border border-white/10 bg-black/40 p-6"
+        <section id="beneficios" className="bg-[#EBEBEB] py-20 text-[#030304] md:py-28">
+          <div className="urus-container">
+            <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+              <h2 className="font-display text-5xl font-bold leading-none md:text-7xl">
+                {t("Escolha_seu_cuidado_151")}
+              </h2>
+              <p className="max-w-xl text-lg leading-8 text-[#030304]/65">
+                {content.hero.subtitle}
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-5 lg:grid-cols-2">
+              {[
+                {
+                  id: "quick-massage",
+                  title: t("Quick_Massage_145"),
+                  price: content.quickMassage.priceHighlight,
+                  description: t(
+                    "Pensada_para_quem_trabalha_em_escritorio_atende_clientes_ou_167",
+                  ),
+                  benefits: content.quickMassage.benefits,
+                },
+                {
+                  id: "taping",
+                  title: t("Taping_terapeutico_para_suporte_e_performance_168"),
+                  price: content.taping.priceHighlight,
+                  description: content.taping.description,
+                  benefits: content.taping.benefits,
+                },
+              ].map((service) => (
+                <article
+                  id={service.id}
+                  key={service.id}
+                  className="flex flex-col rounded-lg bg-[#030304] p-7 text-[#EBEBEB] md:p-9"
                 >
-                  <h3 className="text-lg font-semibold text-amber-200">
-                    {faq.question}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-200">{faq.answer}</p>
-                </div>
+                  <div className="flex items-start justify-between gap-5">
+                    <h3 className="font-display text-3xl font-bold leading-tight md:text-4xl">
+                      {service.title}
+                    </h3>
+                    <span className="whitespace-nowrap text-sm font-extrabold text-[#F2AD1D]">
+                      {service.price}
+                    </span>
+                  </div>
+                  <p className="mt-5 leading-7 text-[#EBEBEB]/65">
+                    {service.description}
+                  </p>
+                  <ul className="mt-7 grid gap-3 border-t border-white/10 pt-6">
+                    {service.benefits.map((benefit) => (
+                      <li key={benefit.title} className="flex items-center gap-3 font-bold">
+                        <Check className="h-4 w-4 flex-none text-[#F2AD1D]" />
+                        {benefit.title}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href={content.hero.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-8 inline-flex items-center gap-2 font-extrabold text-[#F2AD1D] transition hover:text-white"
+                  >
+                    {t("Agendar_190")}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </article>
               ))}
             </div>
-            <div className="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-blue-400/40 bg-blue-500/10 p-6 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <h3 className="text-xl font-semibold text-blue-100">
-                  {t("Pronto_para_cuidar_do_corpo_hoje_179")}
-                </h3>
-                <p className="mt-2 text-sm text-blue-100/80">
-                  {t("Agende_sua_quick_massage_ou_sessao_de_taping_agora_180")}
-                </p>
+          </div>
+        </section>
+
+        <section className="py-20 md:py-28">
+          <div className="urus-container grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#F2AD1D]">
+                {t("Duvidas_rapidas_111")}
+              </p>
+              <h2 className="mt-4 font-display text-5xl font-bold leading-none md:text-6xl">
+                {t("Perguntas_frequentes_178")}
+              </h2>
+              <div className="mt-8 flex items-center gap-3 text-[#EBEBEB]/65">
+                <Clock3 className="h-5 w-5 text-[#F2AD1D]" />
+                {t("As_sessoes_variam_entre_15_e_25_minutos_conforme_135")}
               </div>
-              <Link
-                href={content.hero.ctaHref}
-                className="rounded-md bg-gradient-to-r from-amber-400 to-amber-500 px-6 py-3 text-base font-semibold text-black transition hover:from-amber-300 hover:to-amber-400"
-              >
-                {t("Falar_com_especialista_181")}
-              </Link>
+            </div>
+            <div className="divide-y divide-white/10 border-y border-white/10">
+              {content.faqs.map((faq) => (
+                <details key={faq.question} className="group py-6">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-5 text-lg font-extrabold text-white">
+                    {faq.question}
+                    <span className="text-2xl font-light text-[#F2AD1D] transition group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="max-w-2xl pt-4 leading-7 text-[#EBEBEB]/65">{faq.answer}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        <section id="localizacao" className="container mx-auto mt-20 px-4">
-          <div className="rounded-3xl border border-white/10 bg-black/40 p-8 text-white shadow-xl">
-            <h2 className="text-3xl font-semibold text-white md:text-4xl">
-              {t("Estamos_na_Graca_Salvador_182")}
-            </h2>
-            <p className="mt-3 text-gray-200">
-              {t("Facil_acesso_pela_Avenida_Fernandes_da_Cunha_proximo_a_183")}
-            </p>
-            <div className="mt-8">
-              <Location />
-            </div>
-          </div>
-        </section>
+        <Location />
       </main>
       <Footer />
       <WhatsAppButton />
